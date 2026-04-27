@@ -1,11 +1,11 @@
 # Mimir
 
-At a high level, Mimir (_named after the Norse god: [Mímir](https://en.wikipedia.org/wiki/Mímir)_) is a dynamic tree-walk interpreted langauge. It features support for object-oriented paradigms & has closures. It's inspired by Lox, the language by Robert Nystrom featured in [Crafting Interpreters](https://www.craftinginterpreters.com/the-lox-language.html). 
+At a high level, Mimir (_named after the Norse god: [Mímir](https://en.wikipedia.org/wiki/Mímir)_) will be a dynamic tree-walk interpreted langauge. It'll feature support for object-oriented paradigms & has closures. It's inspired by Lox, the language by Robert Nystrom featured in [Crafting Interpreters](https://www.craftinginterpreters.com/the-lox-language.html). 
 
 Goals of Mimir are as follows:
 
 1. **Learning**: As a Software Engineering student at BYU–Idaho, this senior project serves as my springboard into the deep well of programming language research, interpreter architecture, & compiler engineering.
-2. **Data Oriented Syntax**: Mimir's syntax is designed to be highly expressive, directly representing the movement & transformation of data under the hood. It utilizes a fundamentally C-flavored syntax, but introduces unique differences to highlight data flow.
+2. **Data Oriented Syntax**: Mimir's syntax is planned to be highly expressive, directly representing the movement & transformation of data under the hood. It utilizes a fundamentally C-styled syntax, but introduces unique differences to highlight data flow.
 3. **Simple**: This language should be a small & tight language that is easy to learn & get rolling with. It's a scripting language after all. 
 
 # Core Syntax & Grammar
@@ -18,7 +18,7 @@ Mimir contains 2 Boolean values: true & false.
 
 ### Strings
 
-Strings are connotated with double quotes. Mimir also supports string interpolation. This will first be done through desugaring, but once MVP is hit, this process will be optomized. Strings are not objects, they are raw primitives.
+Strings are connotated with double quotes. Mimir is planned to support string interpolation. This will first be done through desugaring, but once MVP is hit, this process will be optomized. Strings are not objects, they are raw primitives.
 
 ```js
 bind name = "Mímir"
@@ -62,7 +62,7 @@ Mimir will support single & multiline comments & will do so with the following s
 
 ### Arithmetic
 
-Mimir features standard arithmetic operations. Notably, the **%** operator calculates the true Euclidean modulus rather than a simple C-style remainder (e.g., -5 % 3 evaluates to 1, not -2). When performing arithmetic on an interger or a floating point value, the interger will be promoted to float under the hood. A float is never demoted & this is the only place in the whole language where an implicit conversion will happen.
+Mimir will feature standard arithmetic operations. Notably, the **%** operator calculates the true Euclidean modulus rather than a simple C-style remainder (e.g., -5 % 3 evaluates to 1, not -2). ❗️When performing arithmetic on an interger or a floating point value, the interger will be promoted to float under the hood for convenience. A float is never demoted for any reason & this is the only place in the whole language where an implicit conversion will happen.
 
 ```js
 bind result = add + me
@@ -83,11 +83,11 @@ less_than < or_equal
 greater > than
 greater_than >= orEqual
 
->> String comparison using builtin length() function.
-#length(str_one) > #length(str_two) >> #process() denotes a global interpreter function
+>> String comparison using builtin #length() process.
+#length(str_one) > #length(str_two) >> #process() denotes an interpreter-provided function
 ```
 
-The equality operators "==" & "!=" can be used to test any 2 values. It can also be used to test for types.
+The equality operators "==" & "!=" can be used to test any 2 values. It can also be used to test for types. #type() returns "boolean," "string," "number," or "nil."
 
 ```js
 5 == 5 >> true
