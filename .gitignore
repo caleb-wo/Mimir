@@ -1,0 +1,6 @@
+# Ignore all Word documents
+*.docx
+
+# Ignore Word temporary/lock files (which start with ~$)
+~$*.docx
+
