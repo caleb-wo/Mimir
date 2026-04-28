@@ -22,17 +22,19 @@ Mimir contains 2 Boolean values: ```true``` & ```false```.
 
 Strings are connotated with double quotes. Mimir is planned to support string interpolation. This will first be done through desugaring, but once MVP is hit, this process will be optomized. Strings are not objects, they are raw primitives.
 
-```js
+```lua
 bind name = "Mímir"
 bind greeting = 'Hello from #|name|!'
 bind another_example = '#|name| is over #| 2500 * 2 | years old.'
+
+name[0] is "M"
 ```
 
 ### Numbers
 
 Numbers can either be integers or floating points numbers. Numbers are not objects, they are raw primitives.
 
-```js
+```lua
 bind interger = 10
 bind float    = 10.10
 ```
@@ -41,7 +43,7 @@ bind float    = 10.10
 
 In Mimir, "_nothing_" is represented simply:
 
-```js
+```lua
 bind amount_of_cookies = nil -- 😢
 ```
 
@@ -49,14 +51,14 @@ bind amount_of_cookies = nil -- 😢
 
 Mimir will include dynamic arrays. 
 
-```rust
+```lua
 bind dynamic_array = ["Item 1", "Item 2", 3, 55.55]
 #push(dynamic_array, "Item 3") -- #process() denotes an interpreter-provided function
 ```
 
 By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the array.
 
-```rust
+```lua
 bind dyn_typed_array   = #["Value 1", "Value 2"] -- assumes string
 #push(dyn_type_array, 25) -- ERROR: dyn_type_array is typed to "string" but recieved an int.
 
@@ -73,7 +75,7 @@ To prioritize developer ergonomics and clean version control, Map declarations f
 
 Maps can also hold functions. More later in the "Processes" section.
 
-```js
+```lua
 bind map = {
   "first_name": "SpongeBob",
   "age": 40,
@@ -86,7 +88,7 @@ map["last_name"] = "SquarePants"
 
 Mimir will support single & multiline comments & will do so with the following syntax.
 
-```rust
+```clojure
 -- This is a single lined comment.
 
 --(
@@ -103,7 +105,7 @@ Mimir will support single & multiline comments & will do so with the following s
 
 Mimir will feature standard arithmetic operations. Notably, the **%** operator calculates the true Euclidean modulus rather than a simple C-style remainder (e.g., -5 % 3 evaluates to 1, not -2). ❗️When performing arithmetic on an interger or a floating point value, the interger will be promoted to float under the hood for convenience. A float is never demoted for any reason & this is the only place in the whole language where an implicit conversion will happen.
 
-```js
+```lua
 bind result = add + me
 result = subtract - me
 result = multiply * me
@@ -116,19 +118,19 @@ result = modulus % me
 
 Mimir will have standard comparison operators. All of these expressions will return a Boolean value & can only be used on numbers.
 
-```js
+```lua
 less < than
 less_than < or_equal
 greater > than
 greater_than >= orEqual
 
--- String comparison using builtin #length() process.
+-- String comparison using builtin #length() process. #length() also works with arrays and maps
 #length(str_one) > #length(str_two)
 ```
 
 The equality operators "is" & "isnt" can be used to test any 2 values. It can also be used to test for types. #type() returns "boolean," "string," "number," or "nil."
 
-```rust
+```lua
 5 is 5 -- true
 5 is 5.0 -- false
 "Thor" isnt "Zeus" -- true
@@ -143,28 +145,28 @@ bind value2 = 18
 
 In Mimir, the not operator is the word 'flip.'
 
-```js
+```lua
 not true -- false
 not false -- true
 ```
 
 The other 2 logical operators/control flow statements are "and" & "or." Both are short circuiting. 'and' returns the left value if it's false & doesn't check the next value. 'or' returns "true" if the first value is true without checking the second.
 
-```js
+```lua
 true and true -- true
 true and false -- false
-i_am_false() and i_am_true() -- i_am_true() is never checked.
+i_am_false() and i_am_true() -- SHORTCIRCUIT: i_am_true() is never checked.
 
 true or true -- true
 false or true -- true
-i_am_true() or i_am_false() -- i_am_false() is never checked.
+i_am_true() or i_am_false() -- SHORTCIRCUIT: i_am_false() is never checked.
 ```
 
 # The Intrinsic Namespace (`#`)
 
 To maximize memory safety and prevent global shadowing, Mimir strictly separates user-defined logic from engine-level commands using the `#` symbol (The Intrinsic Namespace).
 
-Mimir draws a definitive line between **Keywords** and **System Directives**:
+Mimir draws a line between **Keywords** and **System Directives**:
 
 - **Keywords (`bind`, `if`, `and`, `not`):** These dictate the logical flow and grammar of the script. They exist in "User Space."
 - **System Directives (`#print`, `#const`, `#push()`):** These are direct instructions to the underlying interpreter regarding memory allocation, I/O, or system-level evaluation. They exist in "System Space."
@@ -175,7 +177,7 @@ By keeping all standard library functions and environment modifiers behind the `
 
 Statements in Mimir are prefixed with "```#```," as mentioned.
 
-```rust
+```lua
 #print "Hello"
 ```
 
@@ -183,14 +185,14 @@ Statements in Mimir are prefixed with "```#```," as mentioned.
 
 In Mimir, the difference between a statement like ```#print``` & a function like ```#push(a, b)``` might be unclear at first. However, it's not to complicated. Functions are called processes. We'll get into them later, but for now a process evaluates to a value. It takes data in, transforms it, and gives something back (even if it just gives back the updated array or a success boolean). 
 
-```rust
+```lua
 bind new_size = #push(my_arr, "Item") -- Legal
 ```
 
 A statement does *not* evaluate to a value. It is a raw command that produces a "side effect" (like putting text on a screen with ```#print``` or locking memory with ```#const```). It yields nothing. You cannot assign it to a variable:
 
-```js
-bind value = #print "Hello, World!" >. Illegal, parser will crash.
+```lua
+bind value = #print "Hello, World!" -- Illegal, parser will crash.
 ```
 
 ## Variables
@@ -204,18 +206,18 @@ bind value3, value4, value5
 
 Variable declarations can be modified using system statements to alter their state or scope. It will support constant & global variables. "#const" locks the variable, preventing reassignment. It is recommended to use `SCREAMING_SNAKE_CASE` for constant naming. "#global" explicitly hoists the variable to the global environment, ensuring it can be accessed from anywhere in the script. It is recommended to prefix global variables with `G_`.
 
-```js
+```lua
 #const bind FIXED_VALUE = "I will never change! You're stuck with me!"
 #global bind G_global_value = "I am everywhere."
 ```
 
 ## Control Flow
 
-In Mimir, you have if, unless, for, match, & while. 
+In Mimir, you have if, unless, for, match, while, & until. 
 
 ### IF
 
-```js
+```lua
 if condition {
   #print "yes"
 } else if other_condition {
@@ -229,7 +231,7 @@ if condition {
 
 ```unless``` is best used for quick negative guards, it is restricted to one branch.
 
-```js
+```lua
 unless condition {
   #print "no"
 }
@@ -242,7 +244,7 @@ The `match` statement provides a powerful, readable alternative to complex branc
 * **No Fallthrough:** To ensure safety and prevent bugs, Mimir cases are mutually exclusive. Once a match is found and its block is executed, the interpreter exits the statement.
 * **Multi-Match:** Multiple values can be matched to a single block using a comma-separated list.
 
-```js
+```lua
 match condition {
   case 200:
   	#print "Success"
@@ -257,7 +259,7 @@ match condition {
 
 Because the ```#type()``` system process just returns a string, you can match for a type.
 
-```js
+```lua
 match #type(thing) {
   case "string": #print '#|thing| is a string!'
   case "integer": #print '#|thing| is an integer!'
@@ -275,12 +277,108 @@ match #type(thing) {
 
 Mimir includes a specialized **redirection operator** (`>>`) to create an alias of the matched value. This provides a **scoped reference** (not a copy), allowing access to the data under a specific name within the `case` block.
 
-```js
+```lua
 match http_status {
   case 400, 401, 403, 404 >> error_code:
   	#print "Client failure: #|error_code|"
   default >> unknown_code:
-  	-- This is legal.
+  	#print 'Unknown: #| #type(unknown_code) |'-- This is legal.
 }
+```
+
+### For
+
+Mimir has ```for...in``` loops. When paired with the #range() system process, it's easy to do classic ranged looping.
+
+```lua
+for i in #range(0, 100) { -- #range() is exclusive. So, this will count from 0 to 99, EXCLUDING 100.
+  -- Code here
+}
+
+-- The following is also perfectly fine.
+bind array = #["Recap!", "This", "array", "can", "only", "hold", "strings."]
+for word in array {
+  #print word
+}
+
+for i in #range(0, #length(array)) {
+  -- This works as well.
+}
+```
+
+When two values are followed by ```for```, the loop is given ```index, value``` for arrays & ```key, value``` for maps. When needed, you can use ```_``` to ignore a variable.
+
+```lua
+for i, value in some_array {
+  if some_array[i] is value { #print "I work!" }
+}
+
+for key, value in some_map {
+  if some_map[key] is value { #print "I work!" }
+}
+    
+for key,_ in some_map {
+  #print key
+  #print _ -- ERROR, '_' is discarded
+}
+```
+
+Strings are also supported.
+
+```lua
+bind name = "Mimir"
+
+for char in name {
+    #print char
+}
+-- Result: M, i, m, i, r
+
+for i, char in name {
+    #print "Char #|i| is #|char|"
+}
+```
+
+### While
+
+```lua
+while condition {
+  -- executes while true
+}
+until condition {
+  -- executes while condition is false, a.k.a "Do this UNTIL [this] is true."
+}
+```
+
+### More on Loops
+
+In Mimir, ```while``` & ```for``` loops will have access to ```break``` & ```continue```.
+
+```lua
+for balance in accounts {
+  if balance > 0 { break } -- for-loop is exited
+  if balance is 0 { continue } -- skips to the next loop
+}
+```
+
+## Processes <sub>(functions)</sub>
+
+Mimir treats processes as first-class citizens. They can be declared globally, assigned to variables, or stored in collections. When referencing a process without `()`, the process itself is treated as data.
+
+```lua
+process add_two_numbers(a, b){
+  return a + b
+}
+
+bind add_a_and_b = process(a, b){ return a + b } -- Legal.
+
+bind examples_map = {
+  "add_2_numbers" = add_two_numbers, -- note the omitted ()
+  "add_3_numbers" = process(a, b, c) {
+    return a+b+c
+  },
+}
+add_two_numbers(1, 2)
+examples_map["add_2_numbers"](1, 2)
+examples_map["add_3_numbers"](1, 2, 3)
 ```
 
