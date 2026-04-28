@@ -43,6 +43,26 @@ In Mimir, "_nothing_" is represented simply:
 bind amount_of_cookies = nil >> 😢
 ```
 
+### Arrays
+
+Mimir will include dynamic arrays. 
+
+```js
+bind dynamic_array = ["Item 1", "Item 2", 3, 55.55]
+dynamic_array[?] = "Item 3" >> OR #push(dynamic_array, "Item 3")
+```
+
+By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the buffer.
+
+```js
+bind dyn_typed_array   = #["Value 1", "Value 2"] >> assumes string
+#push(dyn_type_array, 25) >> ERROR: dyn_type_array is typed to "string" but recieved an int.
+
+bind example2 = #!["string"] >> example2 here is empty.
+bind int_example = #![1] 
+bind float_example = #![1.1] >> Any dummy value can be used (e.g., 10000, 12.4325, etc.)
+```
+
 ### Comments
 
 Mimir will support single & multiline comments & will do so with the following syntax.
