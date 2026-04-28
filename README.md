@@ -1,11 +1,13 @@
 # Mimir
 
-At a high level, Mimir (_named after the Norse god: [Mímir](https://en.wikipedia.org/wiki/Mímir)_) will be a dynamic tree-walk interpreted langauge. It'll feature support for object-oriented paradigms & has closures. It's inspired by Lox, the language by Robert Nystrom featured in [Crafting Interpreters](https://www.craftinginterpreters.com/the-lox-language.html). 
+At a high level, Mimir (_named after the Norse god: [Mímir](https://en.wikipedia.org/wiki/Mímir)_) will be a dynamic tree-walk interpreted langauge. I understand tree-walking is not performant. This is to meet the immediate requirements of my senior project. Following the MVP, I plan to refactor the Odin backend into a stack-based bytecode virtual machine to significantly reduce execution overhead and explore lower-level optimization techniques.
+
+It'll feature support for lexical closures & first-class citizen ship for processes (functions). It's inspired by Lox, the language by Robert Nystrom featured in [Crafting Interpreters](https://www.craftinginterpreters.com/the-lox-language.html). It will not have support for object-oriented programming. In Mimir, data & logic are separate.
 
 Goals of Mimir are as follows:
 
-1. **Learning**: As a Software Engineering student at BYU–Idaho, this senior project serves as my springboard into the deep well of programming language research, interpreter architecture, & compiler engineering.
-2. **Data Oriented Syntax**: Mimir's syntax is planned to be highly expressive, directly representing the movement & transformation of data under the hood. It utilizes a fundamentally C-styled syntax, but introduces unique differences to highlight data flow.
+1. **Learning**: As a Software Engineering student at BYU–Idaho, this senior project serves as my springboard into the deep well of programming language research, interpreter architecture, & compiler engineering, something I've intrigued by for a long time.
+2. **Data Oriented Syntax**: Mimir's syntax is planned to be honest, directly representing the movement & transformation of data under the hood. It utilizes a fundamentally C-styled syntax, but introduces unique differences to highlight data flow. It also favors conversational operators (is, isnt, not, and, or) to improve scripting ergonomics.
 3. **Simple**: This language should be a small & tight language that is easy to learn & get rolling with. It's a scripting language after all. 
 
 # Core Syntax & Grammar
@@ -47,14 +49,14 @@ bind amount_of_cookies = nil >> 😢
 
 Mimir will include dynamic arrays. 
 
-```js
+```rust
 bind dynamic_array = ["Item 1", "Item 2", 3, 55.55]
 #push(dynamic_array, "Item 3") >> #process() denotes an interpreter-provided function
 ```
 
 By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the array.
 
-```js
+```rust
 bind dyn_typed_array   = #["Value 1", "Value 2"] >> assumes string
 #push(dyn_type_array, 25) >> ERROR: dyn_type_array is typed to "string" but recieved an int.
 
@@ -84,7 +86,7 @@ map["last_name"] = "SquarePants"
 
 Mimir will support single & multiline comments & will do so with the following syntax.
 
-```js
+```rust
 >> This is a single lined comment.
 
 >(
@@ -126,7 +128,7 @@ greater_than >= orEqual
 
 The equality operators "is" & "isnt" can be used to test any 2 values. It can also be used to test for types. #type() returns "boolean," "string," "number," or "nil."
 
-```js
+```rust
 5 is 5 >> true
 5 is 5.0 >> false
 "Thor" isnt "Zeus" >> true
@@ -173,7 +175,7 @@ By keeping all standard library functions and environment modifiers behind the `
 
 Statements in Mimir are prefixed with "```#```," as mentioned.
 
-```js
+```rust
 #print "Hello"
 ```
 
@@ -181,7 +183,7 @@ Statements in Mimir are prefixed with "```#```," as mentioned.
 
 In Mimir, the difference between a statement like ```#print``` & a function like ```#push(a, b)``` might be unclear at first. However, it's not to complicated. Functions are called processes. We'll get into them later, but for now a process evaluates to a value. It takes data in, transforms it, and gives something back (even if it just gives back the updated array or a success boolean). 
 
-```js
+```rust
 bind new_size = #push(my_arr, "Item") >> Legal
 ```
 
