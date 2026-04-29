@@ -50,23 +50,26 @@ In Mimir, "_nothing_" is represented simply:
 bind amount_of_cookies = nil -- 😢
 ```
 
-### Arrays
+### Lists
 
-Mimir will include dynamic arrays. 
-
-```lua
-bind dynamic_array = ["Item 1", "Item 2", 3, 55.55]
-#push(dynamic_array, "Item 3") -- #process() denotes an interpreter-provided function
-```
-
-By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. 
+Mimir will include dynamic lists or array. Accessing outside of a list's boundary returns ```nil```.
 
 ```lua
-bind dyn_typed_array   = #["Value 1", "Value 2"] -- assumes string
-#push(dyn_type_array, 25) -- ERROR: dyn_type_array is typed to "string" but recieved an int.
+bind list = ["Item 1", "Item 2", 3, 55.55]
+(list[0] is "Item 1") -- Evaluates to true
+(list[100] is nil) -- Evaluates to true
+
+#push(list, "Item 3") -- #process() denotes an interpreter-provided function
 ```
 
-To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the array.
+By default, lists can hold any type. However, for performance, & memory efficiency, you can type a list. 
+
+```lua
+bind typed_list   = #["Value 1", "Value 2"] -- assumes string
+$list.push(dyn_type_list, 25) -- ERROR: dyn_type_list is typed to "string" but recieved an int.
+```
+
+To initialize an empty typed list, Mimir uses the "#!" prototype directive. The interpreter infers the list's type from the provided dummy value, but does not insert the value into the list.
 
 ```lua
 bind example2 = #!["string"] -- example2 here is empty.
@@ -112,8 +115,8 @@ match (grade) {
 The range operator `...`/```..``` requires two integer values. These can be literal numbers, variable bindings, or process results. However, for iterating over collections, use the native `for key_or_index, val in collection` syntax for better performance and readability.
 
 ```lua
-for idx,_ in my_array {} -- Preferred
-for idx in 0..#size(array) {} -- Non-idiomatic/pointless
+for idx,_ in my_list {} -- Preferred
+for idx in 0..#size(list) {} -- Non-idiomatic/pointless
 ```
 
 Ranges can be treated as values & you can have reverse ranges & negatives. 
@@ -133,13 +136,13 @@ cycle 1...100 {} -- Just does something 100 times.
 cycle 100 {} -- exact same thing. Just repeats 100 times.
 ```
 
-Ranges can also be used to take slices of an array or string. 
+Ranges can also be used to take slices of an list or string. 
 
 ```lua
-bind array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+bind list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
 
-bind example1 = array[2..5] -- equals [3, 4, 5], 6 at position 5 is exluded
-bind example2 = array[2...5] -- equals [3, 4, 5, 6], 6 at position 5 is included
+bind example1 = list[2..5] -- equals [3, 4, 5], 6 at position 5 is exluded
+bind example2 = list[2...5] -- equals [3, 4, 5, 6], 6 at position 5 is included
 ```
 
 Of course, they can be passed to processes:
@@ -205,11 +208,11 @@ less_than < or_equal
 greater > than
 greater_than >= orEqual
 
--- String comparison using builtin #size() process. #size() also works with arrays and maps
+-- String comparison using builtin #size() process. #size() also works with lists and maps
 #size(str_one) > #size(str_two)
 ```
 
-The equality operators ```is``` & ```isnt``` can be used to test any 2 values. They can also be used to test for types. ```#type()``` returns a string representation for every type in the language: ```"string", "integer", "float", "boolean", "array", "map", "range", "process", "toolset", "nil"```
+The equality operators ```is``` & ```isnt``` can be used to test any 2 values. They can also be used to test for types. ```#type()``` returns a string representation for every type in the language: ```"string", "integer", "float", "boolean", "list", "map", "range", "process", "toolset", "nil"```
 
 ```lua
 5 is 5 -- true
@@ -224,7 +227,7 @@ bind value2 = 18
 
 ### Logical Operators
 
-In Mimir, the not operator is the word 'flip.'
+In Mimir, the not operator is the word ```not```.
 
 ```lua
 not true -- false
@@ -243,38 +246,56 @@ false or true -- true
 i_am_true() or i_am_false() -- SHORTCIRCUIT: i_am_false() is never checked.
 ```
 
-# The Intrinsic Namespace (`#`)
+### Select / Spare
 
-To maximize memory safety and prevent global shadowing, Mimir strictly separates user-defined logic from engine-level commands using the `#` symbol (The Intrinsic Namespace).
+`select / spare` is a **ternary expression**. This means it is legal anywhere a value is expected, provided it is wrapped in parentheses when combined with other math to avoid ambiguity. Because `select / spare` is an expression (it resolves to a single value), it can be used in:
 
-Mimir draws a line between **Keywords** and **System Directives**:
+- **Assignments:** `bind x = condition select 10 spare 5 -- 10 if condition is true, 5 otherwise`
+- **Math Operations:** `5 + (cond select 10 spare 0)`
+- **Function/Process Arguments:** `#print(is_valid select "Success" spare "Error")`
+- **Return Values:** `process get_status() { return active select 1 spare 0 }`
+- **list/Map Initializers:** `bind scores = [100, (bonus select 50 spare 10), 0]`
 
-- **Keywords (`bind`, `if`, `and`, `not`):** These dictate the logical flow and grammar of the script. They exist in "User Space."
-- **System Directives (`#print`, `#const`, `#push()`):** These are direct instructions to the underlying interpreter regarding memory allocation, I/O, or system-level evaluation. They exist in "System Space."
+### **The Directive Namespace**
 
-By keeping all standard library functions and environment modifiers behind the `#` namespace, Mimir guarantees that a user can never accidentally overwrite a core system function with a local variable.
+To maximize clarity, Mimir strictly separates **User Logic** from **Engine-Level Directives** using the `#` symbol.
 
-## Statements
+Mimir draws a line between **Keywords**, **Directives**, and **Functions**:
 
-Statements in Mimir are prefixed with "```#```," as mentioned.
+- **Keywords** (`bind`, `if`, `until`, `for`): These dictate the logical flow and grammar of the script.
+- **Directives** (`#print`, `#const`): These are direct instructions to the interpreter to perform a "side effect," such as I/O or memory locking. They start with `#` and do not return values.
+- **Processes** (```$str.uppercase()```: Mimir's interpreter comes packed with toolsets for the user. System toolsets are prefixed with '```$```'. Users cannot use '```$```' in indentifiers. System toolsets must be explicitly imported.
 
-```lua
-#print "Hello"
-```
+### **Directives (Statements)**
 
-### #statements versus #processes()
-
-In Mimir, the difference between a statement like ```#print``` & a function like ```#push(a, b)``` might be unclear at first. However, it's not to complicated. Functions are called processes. We'll get into them later, but for now a process evaluates to a value. It takes data in, transforms it, and gives something back (even if it just gives back the updated array or a success boolean). 
-
-```lua
-bind new_size = #push(my_arr, "Item") -- Legal
-```
-
-A statement does *not* evaluate to a value. It is a raw command that produces a "side effect" (like putting text on a screen with ```#print``` or locking memory with ```#const```). It yields nothing. You cannot assign it to a variable:
+Directives in Mimir are prefixed with `#`. They are "Commands" that tell the engine to do something specific. Because they are actions and not values, they cannot be assigned to variables. It's a way to reach inside the interpreter.
 
 ```lua
-bind value = #print "Hello, World!" -- Illegal, parser will crash.
+#print "Hello, World!"
 ```
+
+**The "No-Value" Rule:** A directive produces a "side effect" (like putting text on a screen) but yields nothing to the language. You cannot bind a directive to a variable:
+
+```lua
+bind value = #print "Hello!" -- Illegal: Parser Error.
+```
+
+### **Standard Library & System Processes**
+
+As mentioned, Mimir organizes its standard library into toolsets for the user (see bellow). These must be imported. They are all loaded with the interpreter, but exlicit imports help the interpreter know what it is allowed to check, making it more efficient. All interpreter toolsets are prefixed with ```$```, this is unique to system toolsets. They can be used as follows:
+
+```lua
+#import $str, s -- Here, 's' becomes a user defined alias
+#import $ -- This tells Mimir to make all std libraries available to the program. If this is done
+					-- system toolsets still need to be called like so: $str.length(), $arr.length(), etc.
+
+#print $str.reverse("!olleH") -- Prints "Hello!"
+#print s.reverse("!olleH") -- Prints "Hello!"
+
+toolset $my_toolset {} -- Illegel: '$' is reserved for system toolsets
+```
+
+
 
 ## Variables
 
@@ -372,21 +393,21 @@ for i in #range(0, 100) { -- #range() is exclusive. So, this will count from 0 t
 }
 
 -- The following is also perfectly fine.
-bind array = #["Recap!", "This", "array", "can", "only", "hold", "strings."]
-for word in array {
+bind list = #["Recap!", "This", "list", "can", "only", "hold", "strings."]
+for word in list {
   #print word
 }
 
-for i in #range(0, #size(array)) {
+for i in #range(0, #size(list)) {
   -- This works as well.
 }
 ```
 
-When two values are followed by ```for```, the loop is given ```index, value``` for arrays & ```key, value``` for maps. When needed, you can use ```_``` to ignore a variable.
+When two values are followed by ```for```, the loop is given ```index, value``` for lists & ```key, value``` for maps. When needed, you can use ```_``` to ignore a variable.
 
 ```lua
-for i, value in some_array {
-  if some_array[i] is value { #print "I work!" }
+for i, value in some_list {
+  if some_list[i] is value { #print "I work!" }
 }
 
 for key, value in some_map {
@@ -549,5 +570,22 @@ Examples of illegal code:
 toolset Vector, v {}
 toolset Velocity, v {} -- Illegal, naming collision with vector's 'v' alias.
 toolset Example, e, Ex, exmpl {} -- Illegal: you are allowed exactly one required name and a maximum of one optional alias.
+```
+
+As mentioned prior, Mimir has a standard library organize into importable toolsets. Here's a full recap:
+
+- System toolsets are prefixed with "$" & must be explicitly imported. Sysem toolsets require no ```from``` statement.
+
+```lua
+#import $str, s 
+#import $math
+```
+
+- Users can also opt into all of them with a specialized universal import syntax:
+
+```lua
+#import $
+
+$list
 ```
 
