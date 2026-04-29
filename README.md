@@ -1,5 +1,7 @@
 # Mimir
 
+<sub>(If Mimir is being <em><strong>seriously</strong></em> used somewhere, please let me know & I'll get back to workshopping.)</sub>
+
 At a high level, Mimir (_named after the Norse god: [Mímir](https://en.wikipedia.org/wiki/Mímir)_) will be a dynamic tree-walk interpreted langauge. I understand tree-walking is not performant. This is to meet the immediate requirements of my senior project. Following the MVP, I plan to refactor the Odin backend into a stack-based bytecode virtual machine to significantly reduce execution overhead and explore lower-level optimization techniques.
 
 It'll feature support for lexical closures & first-class citizen ship for processes (functions). I developed it by applying what I learned from Lox, the language by Robert Nystrom featured in [Crafting Interpreters](https://www.craftinginterpreters.com/the-lox-language.html). It will not have support for object-oriented programming. In Mimir, data & logic are separate.
@@ -7,7 +9,7 @@ It'll feature support for lexical closures & first-class citizen ship for proces
 Goals of Mimir are as follows:
 
 1. **Learning**: As a Software Engineering student at BYU–Idaho, this senior project serves as my springboard into the deep well of programming language research, interpreter architecture, & compiler engineering, things I've been intrigued by for a long time.
-2. **Data Oriented Syntax**: Mimir's syntax is planned to be honest, directly representing the movement & transformation of data under the hood. It utilizes a fundamentally C-styled syntax, but introduces unique differences to highlight data flow. It also favors conversational operators (is, isnt, not, and, or) to improve scripting ergonomics.
+2. **Data Oriented Syntax**: Mimir's syntax is planned to be honest, directly representing the movement & transformation of data under the hood to the best I can. It utilizes a fundamentally C-styled syntax, but introduces unique differences to highlight data flow. It also favors conversational operators (is, isnt, not, and, or) to improve scripting ergonomics.
 3. **Simple**: This language should be a small & tight language that is easy to learn & get rolling with. It's a scripting language after all. 
 
 # Core Syntax & Grammar
@@ -25,6 +27,7 @@ Strings are connotated with double quotes. Mimir is planned to support string in
 ```lua
 bind name = "Mímir"
 bind greeting = 'Hello from #|name|!'
+bind greeting2 = "Hello from " + name + "!"
 bind another_example = '#|name| is over #| 2500 * 2 | years old.'
 
 name[0] is "M"
@@ -73,7 +76,7 @@ Mimir supports dynamic key-value data structures known as Maps. Maps are declare
 
 To prioritize developer ergonomics and clean version control, Map declarations fully support **hanging (trailing) commas**.
 
-Maps can also hold functions. More later in the "Processes" section.
+Maps can also hold functions. More later in the "Processes" section. Mimir doesn't support dot access.
 
 ```lua
 bind map = {
@@ -81,6 +84,8 @@ bind map = {
   "age": 40,
 }
 map["last_name"] = "SquarePants"
+map["age"] = 39 -- was 40
+
 #print map["first_name"] -- prints SpongeBob
 ```
 
@@ -380,5 +385,68 @@ bind examples_map = {
 add_two_numbers(1, 2)
 examples_map["add_2_numbers"](1, 2)
 examples_map["add_3_numbers"](1, 2, 3)
+```
+
+If a process reaches it's end & does not ever reach a ```return``` keword, it will implicitly return ```nil```.
+
+### Closures
+
+Just like in Nystrom's Lox, Mimir will support closures. I encourage you to read [🖥️HERE](https://craftinginterpreters.com/the-lox-language.html#closures) as they will act the same exact way.
+
+```lua
+process outer(){
+  bind outer_variable = "Hello!"
+  
+  process inner(){
+    #print outer_variable -- inner() will know outer_variable even after outer() has finished execution                             -- and its scope would normally be destroyed.
+  }
+  
+  return inner
+}
+
+bind ps = outer()
+ps() -- prints "Hello!"
+```
+
+Mimir supports variable shadowing, allowing inner scopes to declare variables with the same name as those in outer scopes without affecting the original value. When a name is referenced, the interpreter resolves it by searching from the innermost scope outward, ensuring that local logic remains isolated from global state.
+
+```lua
+process outer(){
+  bind a = "Hello!"
+  process inner(){
+    bind a = "Hola!"
+    #print a
+  }
+}
+
+bind ps = outer()
+ps() -- prints "Hola!"
+```
+
+### Toolsets
+
+In Mimir, there is a special way to associate processes. This can be done by making a 🧰toolset. A toolset creates a __static module__ for various processes. The processes aren't "aware" of each other (no implicit `this` or relative scoping). This remains true to Mimir's goal of data orientation. Each process is logically independent but remains associated with its siblings by the data it is designed to handle. A toolset requires a primary name and allows for one optional alias. Both must be unique within the global scope. Mimir prefers ```PascalCase``` for toolset names. Toolsets must be declared at the top-level scope (zero lexical depth). They cannot be nested within processes, loops, or conditional blocks. This ensures that the program’s logical infrastructure remains static and globally accessible.
+
+```lua
+toolset Vector, v {
+  process copy(v) {
+    -- logic for copying a vector
+  }
+  process add(a, b){
+    --logic for adding a vector
+  }
+  -- ...
+}
+
+bind result  = Vector.copy(some_vector)
+bind result2 = v.copy(some_vector)
+```
+
+Examples of illegal code:
+
+```lua
+toolset Vector, v {}
+toolset Velocity, v {} -- Illegal, naming collision with vector's 'v' alias.
+toolset Example, e, Ex, exmpl {} -- Illegal: you are allowed exactly one required name and a maximum of one optional alias.
 ```
 
