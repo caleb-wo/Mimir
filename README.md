@@ -59,24 +59,30 @@ bind dynamic_array = ["Item 1", "Item 2", 3, 55.55]
 #push(dynamic_array, "Item 3") -- #process() denotes an interpreter-provided function
 ```
 
-By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the array.
+By default, arrays can hold any type. However, for performance, & memory efficiency, you can type an array. 
 
 ```lua
 bind dyn_typed_array   = #["Value 1", "Value 2"] -- assumes string
 #push(dyn_type_array, 25) -- ERROR: dyn_type_array is typed to "string" but recieved an int.
+```
 
+To initialize an empty typed array, Mimir uses the "#!" prototype directive. The interpreter infers the array's type from the provided dummy value, but does not insert the value into the array.
+
+```lua
 bind example2 = #!["string"] -- example2 here is empty.
 bind int_example = #![1] 
 bind float_example = #![1.1] -- Any dummy value can be used (e.g., 10000, 12.4325, etc.)
 ```
 
+
+
 ### Maps
 
 Mimir supports dynamic key-value data structures known as Maps. Maps are declared using standard JSON-style curly braces `{}`.
 
-To prioritize developer ergonomics and clean version control, Map declarations fully support **hanging (trailing) commas**.
+To prioritize developer ergonomics and clean version control, Map declarations fully support **trailing/hanging commas**.
 
-Maps can also hold functions. More later in the "Processes" section. Mimir doesn't support dot access.
+Maps can also hold functions. More later in the "Processes" section. Mimir doesn't support dot access, except for ```toolset``` which you'll read about later.
 
 ```lua
 bind map = {
@@ -87,6 +93,74 @@ map["last_name"] = "SquarePants"
 map["age"] = 39 -- was 40
 
 #print map["first_name"] -- prints SpongeBob
+```
+
+### Range
+
+Mimir will have support for a range data type.  (you'll see some sneek peaks for loops, match cases, functions, & more here)
+
+```lua
+for i in 0..10  {} -- Counts from 0 to 9, 10 is excluded
+for i in 0...10 {} -- Count from 0 to 10, 10 is included
+match (grade) {
+  case 90...100: -- checks to see if value is within range. 
+  	#print "A" 
+  -- etc.
+}
+```
+
+The range operator `...`/```..``` requires two integer values. These can be literal numbers, variable bindings, or process results. However, for iterating over collections, use the native `for key_or_index, val in collection` syntax for better performance and readability.
+
+```lua
+for idx,_ in my_array {} -- Preferred
+for idx in 0..#size(array) {} -- Non-idiomatic/pointless
+```
+
+Ranges can be treated as values & you can have reverse ranges & negatives. 
+
+```lua
+bind my_range = 0..100
+my_range = 50..0 -- Counts down from 50 to 1
+bind last_nights_weather_range = -10...17 -- Counts from -10 to 17
+
+for i in my_range{} -- Legal
+```
+
+If you just need to do something 'x' amount of times, there is a special ```cycle``` loop available to you. This treats the range **or** number as a count.
+
+```lua
+cycle 1...100 {} -- Just does something 100 times.
+cycle 100 {} -- exact same thing. Just repeats 100 times.
+```
+
+Ranges can also be used to take slices of an array or string. 
+
+```lua
+bind array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+
+bind example1 = array[2..5] -- equals [3, 4, 5], 6 at position 5 is exluded
+bind example2 = array[2...5] -- equals [3, 4, 5, 6], 6 at position 5 is included
+```
+
+Of course, they can be passed to processes:
+
+```lua
+bind entity_range = 1...calculate_entity_space(GAME_DIFFICULTY_SETTING) 
+process spawn_enemies(entity_range){
+  for entity_range {
+    -- work
+  }
+}
+```
+
+Counts will always flow from left to right:
+
+```lua
+0..50 -- counts up
+50..0 -- counts down
+
+-4..-100 -- counts down
+-100..-4 -- counts up
 ```
 
 ### Comments
@@ -108,7 +182,7 @@ Mimir will support single & multiline comments & will do so with the following s
 
 ### Arithmetic
 
-Mimir will feature standard arithmetic operations. Notably, the **%** operator calculates the true Euclidean modulus rather than a simple C-style remainder (e.g., -5 % 3 evaluates to 1, not -2). ❗️When performing arithmetic on an interger or a floating point value, the interger will be promoted to float under the hood for convenience. A float is never demoted for any reason & this is the only place in the whole language where an implicit conversion will happen.
+Mimir will feature standard arithmetic operations. Notably, the **%** operator calculates the true Euclidean modulus rather than a simple C-style remainder (e.g., -5 % 3 evaluates to 1, not -2). 
 
 ```lua
 bind result = add + me
@@ -118,6 +192,8 @@ result = divide / me
 result = modulus % me
 -make_me_negative
 ```
+
+<em>❗️When performing arithmetic on an interger or a floating point value, the interger will be promoted to float under the hood for convenience. A float is never demoted for any reason & this is the only place in the whole language where an implicit conversion will happen.</em>
 
 ### Comparison & Equality
 
@@ -129,11 +205,11 @@ less_than < or_equal
 greater > than
 greater_than >= orEqual
 
--- String comparison using builtin #length() process. #length() also works with arrays and maps
-#length(str_one) > #length(str_two)
+-- String comparison using builtin #size() process. #size() also works with arrays and maps
+#size(str_one) > #size(str_two)
 ```
 
-The equality operators "is" & "isnt" can be used to test any 2 values. It can also be used to test for types. #type() returns "boolean," "string," "number," or "nil."
+The equality operators ```is``` & ```isnt``` can be used to test any 2 values. They can also be used to test for types. ```#type()``` returns a string representation for every type in the language: ```"string", "integer", "float", "boolean", "array", "map", "range", "process", "toolset", "nil"```
 
 ```lua
 5 is 5 -- true
@@ -155,7 +231,7 @@ not true -- false
 not false -- true
 ```
 
-The other 2 logical operators/control flow statements are "and" & "or." Both are short circuiting. 'and' returns the left value if it's false & doesn't check the next value. 'or' returns "true" if the first value is true without checking the second.
+The other 2 logical operators/control flow statements are ```and``` & ```or```. Both are short circuiting. ```and``` returns the left value if it's ```false``` & doesn't check the next value. ```or``` returns ```true``` if the first value is true without checking the second.
 
 ```lua
 true and true -- true
@@ -218,7 +294,7 @@ Variable declarations can be modified using system statements to alter their sta
 
 ## Control Flow
 
-In Mimir, you have if, unless, for, match, while, & until. 
+In Mimir, you have ```if```, ```unless```, ```for```, ```match```, ```while```, ```until```, & ```cycle```. 
 
 ### IF
 
@@ -269,12 +345,7 @@ match #type(thing) {
   case "string": #print '#|thing| is a string!'
   case "integer": #print '#|thing| is an integer!'
   case "float": #print '#|thing| is a float!'
-  case "boolean": #print '#|thing| is a boolean!'
-  case "array": #print '#|thing| is an array!'
-  case "map": #print '#|thing| is a map!'
-  case "process": #print '#|thing| is a process!'
-  case "nil": #print '#|thing| is nil!'
-  default: #print "Something really, really weird happened."
+  -- and so on...
 }
 ```
 
@@ -306,7 +377,7 @@ for word in array {
   #print word
 }
 
-for i in #range(0, #length(array)) {
+for i in #range(0, #size(array)) {
   -- This works as well.
 }
 ```
@@ -343,6 +414,15 @@ for i, char in name {
 }
 ```
 
+Mimir's also supports special range syntax.
+
+```lua
+for i in 0..100 {} -- Counts from 0 to 99, 100 is excluded.
+for i in 0...100 {} -- Counts from 0 to 100, 100 is included.
+for i in 100..0 {} -- Reverse range.
+for i in 100..-0 {} -- ERROR: cannot use negatives (on either side of '..')
+```
+
 ### While
 
 ```lua
@@ -363,6 +443,27 @@ for balance in accounts {
   if balance > 0 { break } -- for-loop is exited
   if balance is 0 { continue } -- skips to the next loop
 }
+```
+
+### Cycle
+
+You saw the cycle loop earlier. The `cycle` statement is a high-level convenience tool for fixed repetition. It accepts either a **literal integer** or a **range**. 
+
+```lua
+cycle 10 {} -- repeats code 10 times
+cycle 0..99 {} -- repeats code 99 times
+```
+
+- When given a negative number, ```cycle``` will always count towards ```0```. 
+
+- When passed a single integer, `cycle` runs that many times. If the number is negative, Mimir counts upward toward zero. 
+
+- When passed a range, `cycle` follows the explicit bounds and direction of that range. 
+
+```lua
+cycle -50 {} -- Does some thing 50 times, counting up to 0
+
+cycle -10...-100 {} -- Legal, counts down from -10 to -100
 ```
 
 ## Processes <sub>(functions)</sub>
