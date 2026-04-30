@@ -1,4 +1,4 @@
-# Mimir — Language Specification v2
+# Mimir — Language Specification
 
 <sub>(If Mimir is being <em><strong>seriously</strong></em> used somewhere, please let me know & I'll get back to workshopping.)</sub>
 
@@ -737,4 +737,4 @@ These are planned improvements for after the MVP is complete:
 - **JIT**: This one's far out there, but I'd like to try adding a special directive, maybe ```#hot```, ```#jit```, etc. for processes & loops that tells the interpreter to JIT compile the code. I'd try to do this with [GNU Lightning](https://www.gnu.org/software/lightning/).
 
 
-> This README.md is derived from the first one I put together in [LEGACY.md](./LEGACY.md). I told [Cline](https://cline.bot) the following: "I'm making a programming language called Mimir. It's both a BYU–Idaho senior project and a passion project. I will have about 11 weeks to reach a working MVP. I'm making it with Odin. My plan is to follow along Robert Nystrom's JLox implementation in Crafting Interpreters and to break off when he gets into classes and OOP. Please deeply study & comprehend @/README.md [this is the original, now LEGACY.md]. It's my quick-shot run down of the language. Once you have a good understanding, output a new summary/specification document in @/V2.md [now this file]. Try to stay true to my writing style, & preserve **as much** of my original content as possible. Make it flow logically."
+> This README.md is derived from the first one I put together in [LEGACY.md](./LEGACY.md). I told [Cline](https://cline.bot) the following: "I'm making a programming language called Mimir. It's both a BYU–Idaho senior project and a passion project. I will have about 11 weeks to reach a working MVP. I'm making it with Odin. My plan is to follow along Robert Nystrom's [jLox implementation](https://github.com/munificent/craftinginterpreters) in Crafting Interpreters and to break off when he gets into classes and OOP. Please deeply study & comprehend @/README.md _[this is the original, now LEGACY.md]_. It's my quick-shot run down of the language. Once you have a good understanding, output a new summary/specification document in @/V2.md _[now this file]_. Try to stay true to my writing style, & preserve **as much** of my original content as possible. Make it flow logically."
