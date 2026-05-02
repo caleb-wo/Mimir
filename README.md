@@ -636,78 +636,85 @@ toolset $my_toolset {} -- [Parser Error]: '$' is reserved for system toolsets.
 
 This section defines the minimum requirements for a functional Mimir interpreter. The goal is a rudimentary but working language — something that mirrors Nystrom's most basic, functional version of JLox, adapted to Mimir's syntax. Without this, there is no project.
 
+I also had AI triage the requirements and put them into three groups: 
+- 🏅 : These are requirements that need to be completed. If a 'gold-medal-requirement' is not done, there is literally no Mimir. When I complete __ALL__ gold requirements, I will have reached MVP. From there I'll create feature/dev branches and start working on 🥈 targets.
+- 🥈 : Silver requirements are the added control flows, syntax, and data types.
+- 🥉 : Bronze requirements are those final 'sugar'/syntax additions & features that will be added. These are the features that do not impact the overall functionality of the language
+
+The development will essentially be 3 passes going through each phase again. One the first pass, I'll handle the gold requirements, this will take the longest. Then on the second & third passes, I'll work through silver & godl requirements respectively.
+
 ### Phase 1 — Scanner / Lexer
-- [ ] Tokenize all keywords, identifiers, literals (integer, float, string, boolean, nil)
-- [ ] Tokenize all operators (`+`, `-`, `*`, `/`, `%`, `<`, `>`, `<=`, `>=`, `is`, `isnt`, `not`, `and`, `or`, `..`, `...`, `>>`, `#|`, `|`)
-- [ ] Tokenize delimiters (`{`, `}`, `[`, `]`, `(`, `)`, `:`, `,`, `=`)
-- [ ] Tokenize `#` directives and `$` system toolset prefixes
-- [ ] Handle single-line (`--`) and multiline (`--(...)--`) comments, including nested multiline comments
-- [ ] Report scan errors with line numbers
+- 🏅 **Tokenize basic keywords, identifiers, literals** (integer, float, boolean, nil). *You need data.*
+- 🏅 **Tokenize core operators** (`+`, `-`, `*`, `/`, `<`, `>`, `<=`, `>=`, `is`, `isnt`, `not`, `and`, `or`, `=`). *You need math and logic.*
+- 🏅 **Tokenize basic delimiters** (`{`, `}`, `(`, `)`, `,`). *You need grouping.*
+- 🏅 **Tokenize `#` directives** (specifically for `#print`). 
+- 🏅 **Handle single-line (`--`) comments.** *Crucial for writing test scripts.*
+- 🏅 **Report scan errors with line numbers.** *You will go crazy debugging without this.*
+- 🥈 **Tokenize list/map delimiters and operators** (`[`, `]`, `:`, `%`).
+- 🥉 **Tokenize advanced operators** (`..`, `...`, `>>`, `#|`, `|`).
+- 🥉 **Tokenize `$` system toolset prefixes.**
+- 🥉 **Handle multiline (`--(...)--`) comments, including nested.** *Writing the state machine for nested comments can be a time-sink; save it.*
 
 ### Phase 2 — Parser (Recursive Descent → AST)
-- [ ] Parse all expression types: arithmetic, comparison, equality (`is`/`isnt`), logical (`not`/`and`/`or`), grouping, unary negation
-- [ ] Parse `select`/`spare` ternary expressions
-- [ ] Parse `bind` variable declarations (with and without initializer)
-- [ ] Parse `#const` and `#global` modifiers
-- [ ] Parse `if`/`else if`/`else` statements
-- [ ] Parse `unless` statements
-- [ ] Parse `while` and `until` loops
-- [ ] Parse `for...in` loops (range, list, map, string)
-- [ ] Parse `cycle` loops (integer and range)
-- [ ] Parse `match`/`case`/`default` statements (including multi-match and `>>` capture)
-- [ ] Parse `process` declarations (named and anonymous)
-- [ ] Parse `return` statements
-- [ ] Parse `break` and `continue`
-- [ ] Parse `#print` directive
-- [ ] Parse `#import` directive (system toolsets and file imports)
-- [ ] Parse `toolset` declarations
-- [ ] Parse list literals (including typed `#[...]` and `#type[]`)
-- [ ] Parse map literals (with trailing comma support)
-- [ ] Parse range literals (`..` and `...`)
-- [ ] Parse index/subscript access (`list[i]`, `map["key"]`, `str[i]`, slice `list[a..b]`)
-- [ ] Report parse errors with line numbers
+- 🏅 **Parse core expression types:** arithmetic, comparison, equality (`is`/`isnt`), logical (`not`/`and`/`or`), grouping, unary negation.
+- 🏅 **Parse `bind` variable declarations** (with and without initializer).
+- 🏅 **Parse `if`/`else if`/`else` statements.**
+- 🏅 **Parse `while` loops.** *One looping construct is enough for a barebones MVP.*
+- 🏅 **Parse `process` declarations** (named).
+- 🏅 **Parse `return` statements.**
+- 🏅 **Parse `#print` directive.**
+- 🏅 **Report parse errors with line numbers.**
+- 🥈 **Parse list, map, and string literals, plus index/subscript access.**
+- 🥈 **Parse `for...in` loops.**
+- 🥈 **Parse `break` and `continue`.**
+- 🥈 **Parse anonymous processes.**
+- 🥉 **Parse `#const` and `#global` modifiers.** *Standard variables work fine for now.*
+- 🥉 **Parse `select`/`spare` ternary expressions.**
+- 🥉 **Parse `unless` statements.** *Just syntactic sugar for `if (not ...)`.*
+- 🥉 **Parse `until` and `cycle` loops.**
+- 🥉 **Parse `match`/`case`/`default` statements.** *Desugaring this takes a lot of AST manipulation; save it for later.*
+- 🥉 **Parse `#import` and `toolset` declarations.** - 🥉 **Parse range literals** (`..` and `...`).
 
 ### Phase 3 — Tree-Walk Interpreter
-- [ ] Evaluate all expression types
-- [ ] Implement lexical scoping (environment chain)
-- [ ] Implement variable binding, assignment, and lookup
-- [ ] Implement `#const` (prevent reassignment) and `#global` (hoist to global scope)
-- [ ] Implement `if`/`else if`/`else`, `unless`
-- [ ] Implement `while`, `until`, `for...in`, `cycle` with `break`/`continue`
-- [ ] Implement `match` as desugared `if-else-if` equality checks (with `>>` capture)
-- [ ] Implement process declaration, call, and `return`
-- [ ] Implement closures (captured environments)
-- [ ] Implement implicit `nil` return for processes
-- [ ] Implement list operations: creation, index access, out-of-bounds → `nil`, typed lists
-- [ ] Implement map operations: creation, key access, key assignment
-- [ ] Implement range creation, iteration, and slicing
-- [ ] Implement string indexing and iteration
-- [ ] Implement integer → float promotion for mixed arithmetic (only implicit conversion)
-- [ ] Implement `#print` directive
-- [ ] Implement `$type.of()` and `$type.all()`
-- [ ] Implement hard runtime errors with line numbers (crash on type mismatches, division by zero, etc.)
+- 🏅 **Evaluate core expression types.**
+- 🏅 **Implement lexical scoping (environment chain).** *This is the heart of the interpreter. Get this right.*
+- 🏅 **Implement variable binding, assignment, and lookup.**
+- 🏅 **Implement `if`/`else if`/`else`.**
+- 🏅 **Implement `while`.**
+- 🏅 **Implement process declaration, call, and `return`.**
+- 🏅 **Implement closures (captured environments).**
+- 🏅 **Implement implicit `nil` return for processes.**
+- 🏅 **Implement integer → float promotion for mixed arithmetic.**
+- 🏅 **Implement `#print` directive.**
+- 🏅 **Implement hard runtime errors with line numbers.** *Fail fast and loudly.*
+- 🥈 **Implement list/map operations:** creation, indexing, key assignment.
+- 🥈 **Implement string indexing and iteration.**
+- 🥈 **Implement `for...in` loops.**
+- 🥈 **Implement `break` and `continue`.** - 🥉 **Implement `#const` and `#global`.**
+- 🥉 **Implement `unless`, `until`, `cycle`.**
+- 🥉 **Implement `match` as desugared `if-else-if` equality checks.**
+- 🥉 **Implement range creation, iteration, and slicing.**
+- 🥉 **Implement `$type.of()` and `$type.all()`.**
 
 ### Phase 4 — Minimal Standard Library
-- [ ] `$type.of(n)` — returns type string
-- [ ] `$type.all()` — returns list of all type strings
-- [ ] `$list.push(list, val)` — appends to a list
-- [ ] `$list.size(list)` — returns list length
-- [ ] `$str.size(str)` — returns string length
-- [ ] `$str.reverse(str)` — reverses a string
+- 🥈 **`$list.push(list, val)`** 
+- 🥈 **`$list.size(list)`** 
+- 🥈 **`$str.size(str)`** 
+- 🥉 **`$type.of(n)`**
+- 🥉 **`$type.all()`**
+- 🥉 **`$str.reverse(str)`**
 
 ### Definition of Done
 
-A Mimir MVP is complete when the following program runs correctly end-to-end:
+A Mimir MVP is complete (🏅) when the following program runs correctly end-to-end:
 
 ```lua
-process greet(name) {
-  return "Hello, #|name|!"
+process add_logic(x, n) {
+  return x + n
 }
 
-bind names = ["Odin", "Thor", "Mímir"]
-
-for name in names {
-  #print greet(name)
+process make_adder(n) {
+  return add_logic 
 }
 
 bind counter = 0
@@ -716,12 +723,11 @@ while counter < 3 {
   counter = counter + 1
 }
 
-process make_adder(n) {
-  return process(x) { return x + n }
+process greet(name) {
+  return "Hello, " + name
 }
 
-bind add5 = make_adder(5)
-#print add5(10) -- 15
+#print greet("Caleb")
 ```
 
 ---
@@ -737,4 +743,4 @@ These are planned improvements for after the MVP is complete:
 - **JIT**: This one's far out there, but I'd like to try adding a special directive, maybe ```#hot```, ```#jit```, etc. for processes & loops that tells the interpreter to JIT compile the code. I'd try to do this with [GNU Lightning](https://www.gnu.org/software/lightning/).
 
 
-> This README.md is derived from the first one I put together in [LEGACY.md](./LEGACY.md). I told [Cline](https://cline.bot) the following: "I'm making a programming language called Mimir. It's both a BYU–Idaho senior project and a passion project. I will have about 11 weeks to reach a working MVP. I'm making it with Odin. My plan is to follow along Robert Nystrom's [jLox implementation](https://github.com/munificent/craftinginterpreters) in Crafting Interpreters and to break off when he gets into classes and OOP. Please deeply study & comprehend @/README.md _[this is the original, now LEGACY.md]_. It's my quick-shot run down of the language. Once you have a good understanding, output a new summary/specification document in @/V2.md _[now this file]_. Try to stay true to my writing style, & preserve **as much** of my original content as possible. Make it flow logically."
+> The first version of this README.md was made with AI. It is derived from the intial README.md I put together, which you can find in [LEGACY.md](./LEGACY.md). It was a mess of Mimir specs without clear order. I told [Cline](https://cline.bot) the following: "I'm making a programming language called Mimir. It's both a BYU–Idaho senior project and a passion project. I will have about 11 weeks to reach a working MVP. I'm making it with Odin. My plan is to follow along Robert Nystrom's [jLox implementation](https://github.com/munificent/craftinginterpreters) in Crafting Interpreters and to break off when he gets into classes and OOP. Please deeply study & comprehend @/README.md _[this was the original, now LEGACY.md]_. It's my quick-shot run down of the language. Once you have a good understanding, output a new summary/specification document in @/V2.md _[now this file]_. Try to stay true to my writing style, & preserve **as much** of my original content as possible. Make it flow logically."
