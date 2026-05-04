@@ -84,7 +84,7 @@ bind float_example = #float[]
 
 ### Maps
 
-Mimir supports dynamic key-value data structures known as Maps. Maps are declared using standard JSON-style curly braces `{}`.
+Mimir supports dynamic key-val
 
 To prioritize developer ergonomics and clean version control, Map declarations fully support **trailing/hanging commas**.
 
