@@ -1,0 +1,179 @@
+2026.05.04 16:34:30 INFO  Started: Metals version 1.6.7 in folders '/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW' for client Visual Studio Code 1.118.1.
+2026.05.04 16:34:30 INFO  Memory monitor started
+2026.05.04 16:34:30 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.04 16:34:30 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+May 04, 2026 4:34:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+May 04, 2026 4:34:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+May 04, 2026 4:34:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+May 04, 2026 4:34:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:34 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+May 04, 2026 4:34:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2026.05.04 16:34:34 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+May 04, 2026 4:34:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+2026.05.04 16:34:45 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:45 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:46 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:46 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:48 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:53 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:53 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:53 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+May 04, 2026 4:34:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 56
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:55 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:56 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:57 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:34:59 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:00 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:00 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:00 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:00 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:01 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:02 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:03 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:03 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:03 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:03 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:03 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:04 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:06 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:07 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:07 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:09 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:09 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:11 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:11 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:13 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:14 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:14 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:14 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:14 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:16 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala
+2026.05.04 16:35:16 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:25 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:25 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:25 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Mimir.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:33 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/TokenType.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:35:33 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/TokenType.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:46:39 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/TokenType.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.04 16:46:39 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/TokenType.scala
+May 04, 2026 4:47:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 04, 2026 4:47:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

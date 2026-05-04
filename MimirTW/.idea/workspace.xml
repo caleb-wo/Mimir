@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="" />
+    <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Expr.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Mimir.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Parser.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Scanner.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Token.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/TokenType.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +29,13 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3DGvdNia0dsZ3R5rUcvttI3wMnh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,6 +49,14 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
     "vue.rearranger.settings.migration": "true"
   }
@@ -57,6 +76,7 @@
       <updated>1764049088721</updated>
       <workItem from="1764049098334" duration="1000" />
       <workItem from="1777921308400" duration="59000" />
+      <workItem from="1777930790548" duration="3220000" />
     </task>
     <servers />
   </component>
