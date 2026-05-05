@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Expr.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Mimir.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Parser.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Scanner.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Token.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/TokenType.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metals/metals.lock.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metals/metals.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metals/metals.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Scanner.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Scanner.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Token.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Token.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Markdown",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Scala",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +76,7 @@
       <workItem from="1764049098334" duration="1000" />
       <workItem from="1777921308400" duration="59000" />
       <workItem from="1777930790548" duration="3220000" />
+      <workItem from="1777937373570" duration="3123000" />
     </task>
     <servers />
   </component>

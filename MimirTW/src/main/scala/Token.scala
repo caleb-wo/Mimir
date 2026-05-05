@@ -1,5 +1,6 @@
 package tree.walk.mimir
 
+
 case class Token(
   tokenType: TokenType,
   lexeme: String,
