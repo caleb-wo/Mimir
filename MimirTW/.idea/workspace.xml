@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metals/metals.lock.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metals/metals.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metals/metals.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Scanner.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Scanner.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Token.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Token.scala" afterDir="false" />
-    </list>
+    <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.mimir.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -77,6 +71,7 @@
       <workItem from="1777921308400" duration="59000" />
       <workItem from="1777930790548" duration="3220000" />
       <workItem from="1777937373570" duration="3123000" />
+      <workItem from="1777949032876" duration="228000" />
     </task>
     <servers />
   </component>
