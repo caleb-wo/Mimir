@@ -1,51 +1,63 @@
 package main
 
-import "core:bufio"
 import "core:fmt"
 import "core:os"
+import "core:os/path"
 import "core:strings"
 
+had_error : bool
 
-main :: proc(){
-  args := os.args[1:]
-
-  if len(args) > 1 {
-    fmt.println("Usage: mimir [scipt].mmr")
-    os.exit(64)
-  } else if len(args) == 1 {
-    run_file(args[0])
-  } else {
-    run_prompt()
-  }
+main :: proc() {
+    args := os.args
+    if len(args) > 2 {
+        fmt.println("Usage: mimir [script.mmr]")
+        os.exit(64)
+    } else if len(args) == 2 {
+        run_file(args[1])
+    } else {
+        run_prompt()
+    }
 }
 
-run_file :: proc(path: string) {
-  if data, ok := os.read_entire_file(path, context.allocator); ok != nil{
-    defer delete(data, context.allocator)
+run_file :: proc(file_path: string) {
+    data, ok := os.read_entire_file(file_path)
+    if !ok {
+        error(1, fmt.tprintf("Could not read file: %s", file_path))
+        os.exit(74)
+    }
+
     run(string(data))
-  } else {
-    fmt.eprintfln("Error: Mimir couldn't read %s", path)
-    os.exit(1)
-  }
+    if had_error {
+        os.exit(65)
+    }
 }
 
 run_prompt :: proc() {
-  stdin := os.stream_from_handle(os.stdin)
+    for {
+        fmt.print("#> ")
+        line, ok := fmt.read_line(os.stdin)
+        if !ok {
+            return
+        }
+        run(line)
+        had_error = false
+    }
+}
 
-  reader: bufio.Reader
-  bufio.reader_init(&reader, stdin)
-  defer bufio.reader_destroy(&reader)
+run :: proc(source: string) {
+    scanner := scanner_init(source, context.allocator)
+    scanner.scan_tokens()
 
-  for {
-    fmt.print("|> ")
-    _ = os.flush(os.stdout)
+    for token in scanner.tokens {
+        fmt.println(token_to_string(token))
+    }
+}
 
-    if line, err := bufio.reader_read_string(&reader, '\n'); err != nil {
-      line = strings.trim_space(line)
+error :: proc(line: int, message: string) {
+    report(line, "", message)
+}
 
-      if line == "" { continue }
-
-      run(line)
-    } else { break }
-  }
+report :: proc(line: int, at: string, message: string) {
+    fmt.eprintfln("[Line: %d] Error%s: %s", line, at, message)
+    had_error = true
 }

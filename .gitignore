@@ -7,3 +7,6 @@
 # Class Status Report
 class/
 *.docx
+
+# AI Help
+mimir/odin_book_1_10.*

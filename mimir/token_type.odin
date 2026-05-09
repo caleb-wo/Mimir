@@ -1,0 +1,41 @@
+package main
+
+TokenType :: enum {
+    LeftParen,
+    RightParen,
+    LeftBrace,
+    RightBrace,
+    Comma,
+    Plus,
+    Minus,
+    Star,
+    Slash,
+    Hash,
+    Equal,
+    Less,
+    LessEqual,
+    Greater,
+    GreaterEqual,
+
+    Identifier,
+    String,
+    Integer,
+    Float,
+
+    And,
+    Or,
+    Not,
+    Bind,
+    If,
+    Else,
+    While,
+    Process,
+    Return,
+    True,
+    False,
+    Nil,
+    Is,
+    Isnt,
+
+    EOF,
+}

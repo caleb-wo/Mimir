@@ -6,7 +6,7 @@ enum TokenType:
   case Minus, Plus, Slash, Star
   case Hash
 
-  // One or two character operators
+  // Multichar tokens
   case Equal, Less, LessEqual, Greater, GreaterEqual
   case Is, Isnt // Mimir's == and !=
 
