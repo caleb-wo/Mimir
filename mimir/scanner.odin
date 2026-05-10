@@ -1,7 +1,7 @@
 package main
 
 import "core:fmt"
-import "core:strings"
+import "core:mem"
 import "core:strconv"
 
 Scanner :: struct {
@@ -15,39 +15,39 @@ Scanner :: struct {
 
 scanner_init :: proc(source: string, allocator: mem.Allocator) -> Scanner {
     s := Scanner{
-        source = source,
-        tokens = make([dynamic]Token, 0, allocator),
-        start = 0,
-        current = 0,
-        line = 1,
-        keywords = make(map[string]TokenType),
+        source   = source,
+        tokens   = make([dynamic]Token, allocator),
+        start    = 0,
+        current  = 0,
+        line     = 1,
+        keywords = make(map[string]TokenType, allocator),
     }
 
-    s.keywords["and"] = .And
-    s.keywords["or"] = .Or
-    s.keywords["not"] = .Not
-    s.keywords["bind"] = .Bind
-    s.keywords["if"] = .If
-    s.keywords["else"] = .Else
-    s.keywords["while"] = .While
+    s.keywords["and"]     = .And
+    s.keywords["or"]      = .Or
+    s.keywords["not"]     = .Not
+    s.keywords["bind"]    = .Bind
+    s.keywords["if"]      = .If
+    s.keywords["else"]    = .Else
+    s.keywords["while"]   = .While
     s.keywords["process"] = .Process
-    s.keywords["return"] = .Return
-    s.keywords["true"] = .True
-    s.keywords["false"] = .False
-    s.keywords["nil"] = .Nil
-    s.keywords["is"] = .Is
-    s.keywords["isnt"] = .Isnt
+    s.keywords["return"]  = .Return
+    s.keywords["true"]    = .True
+    s.keywords["false"]   = .False
+    s.keywords["nil"]     = .Nil
+    s.keywords["is"]      = .Is
+    s.keywords["isnt"]    = .Isnt
 
     return s
 }
 
 scan_tokens :: proc(s: ^Scanner) {
-    for !s.is_at_end() {
+    for !is_at_end(s) {
         s.start = s.current
-        s.scan_token()
+        scan_token(s)
     }
 
-    s.add_token(.EOF, Literal{nil = {} })
+    add_token(s, .EOF, nil)
 }
 
 is_at_end :: proc(s: ^Scanner) -> bool {
@@ -55,137 +55,141 @@ is_at_end :: proc(s: ^Scanner) -> bool {
 }
 
 scan_token :: proc(s: ^Scanner) {
-    c := s.advance()
+    c := advance(s)
 
     switch c {
     case '(':
-        s.add_token(.LeftParen, {})
+        add_token(s, .LeftParen)
     case ')':
-        s.add_token(.RightParen, {})
+        add_token(s, .RightParen)
     case '{':
-        s.add_token(.LeftBrace, {})
+        add_token(s, .LeftBrace)
     case '}':
-        s.add_token(.RightBrace, {})
+        add_token(s, .RightBrace)
     case ',':
-        s.add_token(.Comma, {})
+        add_token(s, .Comma)
     case '+':
-        s.add_token(.Plus, {})
+        add_token(s, .Plus)
     case '*':
-        s.add_token(.Star, {})
+        add_token(s, .Star)
     case '/':
-        s.add_token(.Slash, {})
+        add_token(s, .Slash)
     case '#':
-        s.add_token(.Hash, {})
+        add_token(s, .Hash)
     case '=':
-        s.add_token(.Equal, {})
+        add_token(s, .Equal)
     case '<':
-        if s.match_char('=') {
-            s.add_token(.LessEqual, {})
+        if match_char(s, '=') {
+            add_token(s, .LessEqual)
         } else {
-            s.add_token(.Less, {})
+            add_token(s, .Less)
         }
     case '>':
-        if s.match_char('=') {
-            s.add_token(.GreaterEqual, {})
+        if match_char(s, '=') {
+            add_token(s, .GreaterEqual)
         } else {
-            s.add_token(.Greater, {})
+            add_token(s, .Greater)
         }
     case '-':
-        if s.match_char('-') {
-            for !s.is_at_end() && s.peek() != '\n' {
-                _ = s.advance()
+        if match_char(s, '-') {
+            for !is_at_end(s) && peek(s) != '\n' {
+                _ = advance(s)
             }
         } else {
-            s.add_token(.Minus, {})
+            add_token(s, .Minus)
         }
     case ' ', '\r', '\t':
         // ignore
     case '\n':
         s.line += 1
     case '"':
-        s.string()
+        scan_string(s)
     case:
         if is_digit(c) {
-            s.number()
+            number(s)
         } else if is_alpha(c) {
-            s.identifier()
+            identifier(s)
         } else {
             error(s.line, fmt.tprintf("Unexpected character: '%c'.", c))
         }
     }
 }
 
-advance :: proc(s: ^Scanner) -> rune {
-    ch := rune(s.source[s.current])
+// advance reads the next byte from source and returns it as a u8.
+// The scanner operates at the byte level; source is expected to be
+// ASCII for identifiers/keywords, and string literals are stored as
+// raw byte slices without re-encoding.
+advance :: proc(s: ^Scanner) -> u8 {
+    ch := s.source[s.current]
     s.current += 1
     return ch
 }
 
-match_char :: proc(s: ^Scanner, expected: rune) -> bool {
-    if s.is_at_end() || rune(s.source[s.current]) != expected {
+match_char :: proc(s: ^Scanner, expected: u8) -> bool {
+    if is_at_end(s) || s.source[s.current] != expected {
         return false
     }
     s.current += 1
     return true
 }
 
-peek :: proc(s: ^Scanner) -> rune {
-    if s.is_at_end() {
+peek :: proc(s: ^Scanner) -> u8 {
+    if is_at_end(s) {
         return 0
     }
-    return rune(s.source[s.current])
+    return s.source[s.current]
 }
 
-peek_next :: proc(s: ^Scanner) -> rune {
+peek_next :: proc(s: ^Scanner) -> u8 {
     if s.current + 1 >= len(s.source) {
         return 0
     }
-    return rune(s.source[s.current + 1])
+    return s.source[s.current + 1]
 }
 
-is_digit :: proc(c: rune) -> bool {
+is_digit :: proc(c: u8) -> bool {
     return c >= '0' && c <= '9'
 }
 
-is_alpha :: proc(c: rune) -> bool {
+is_alpha :: proc(c: u8) -> bool {
     return (c >= 'a' && c <= 'z') ||
            (c >= 'A' && c <= 'Z') ||
            c == '_'
 }
 
-is_alpha_numeric :: proc(c: rune) -> bool {
+is_alpha_numeric :: proc(c: u8) -> bool {
     return is_alpha(c) || is_digit(c)
 }
 
-string :: proc(s: ^Scanner) {
-    for s.peek() != '"' && !s.is_at_end() {
-        if s.peek() == '\n' {
+scan_string :: proc(s: ^Scanner) {
+    for peek(s) != '"' && !is_at_end(s) {
+        if peek(s) == '\n' {
             s.line += 1
         }
-        _ = s.advance()
+        _ = advance(s)
     }
 
-    if s.is_at_end() {
+    if is_at_end(s) {
         error(s.line, "Unterminated string.")
         return
     }
 
-    _ = s.advance()
+    _ = advance(s)
     value := s.source[s.start+1 : s.current-1]
-    s.add_token(.String, Literal{string = value})
+    add_token(s, .String, value)
 }
 
 number :: proc(s: ^Scanner) {
-    for is_digit(s.peek()) {
-        _ = s.advance()
+    for is_digit(peek(s)) {
+        _ = advance(s)
     }
 
     is_float := false
-    if s.peek() == '.' && is_digit(s.peek_next()) {
+    if peek(s) == '.' && is_digit(peek_next(s)) {
         is_float = true
-        _ = s.advance()
-        for is_digit(s.peek()) {
-            _ = s.advance()
+        _ = advance(s)
+        for is_digit(peek(s)) {
+            _ = advance(s)
         }
     }
 
@@ -197,36 +201,36 @@ number :: proc(s: ^Scanner) {
             error(s.line, "Invalid float literal.")
             return
         }
-        s.add_token(.Float, Literal{f64 = f})
+        add_token(s, .Float, f)
     } else {
         i, ok := strconv.parse_i64(text)
         if !ok {
             error(s.line, "Invalid integer literal.")
             return
         }
-        s.add_token(.Integer, Literal{i64 = i})
+        add_token(s, .Integer, i)
     }
 }
 
 identifier :: proc(s: ^Scanner) {
-    for is_alpha_numeric(s.peek()) {
-        _ = s.advance()
+    for is_alpha_numeric(peek(s)) {
+        _ = advance(s)
     }
 
     text := s.source[s.start:s.current]
     if t, ok := s.keywords[text]; ok {
-        s.add_token(t, {})
+        add_token(s, t)
     } else {
-        s.add_token(.Identifier, {})
+        add_token(s, .Identifier)
     }
 }
 
-add_token :: proc(s: ^Scanner, token_type: TokenType, literal: Literal = {}) {
+add_token :: proc(s: ^Scanner, token_type: TokenType, literal: Literal = nil) {
     text := s.source[s.start:s.current]
     append(&s.tokens, Token{
         token_type = token_type,
-        lexeme = text,
-        literal = literal,
-        line = s.line,
+        lexeme     = text,
+        literal    = literal,
+        line       = s.line,
     })
 }

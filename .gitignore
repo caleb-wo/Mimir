@@ -10,3 +10,6 @@ class/
 
 # AI Help
 mimir/odin_book_1_10.*
+
+# Compiled binary
+mimir/mimir

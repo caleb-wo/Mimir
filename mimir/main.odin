@@ -2,8 +2,7 @@ package main
 
 import "core:fmt"
 import "core:os"
-import "core:os/path"
-import "core:strings"
+import "core:bufio"
 
 had_error : bool
 
@@ -20,9 +19,11 @@ main :: proc() {
 }
 
 run_file :: proc(file_path: string) {
-    data, ok := os.read_entire_file(file_path)
-    if !ok {
-        error(1, fmt.tprintf("Could not read file: %s", file_path))
+    data, err := os.read_entire_file_from_path(file_path, context.allocator); 
+    
+    if err != nil {
+        fmt.eprintfln("[Line: 1] Error: Could not read file: %s", file_path)
+        fmt.eprintfln("Message: %v", err)
         os.exit(74)
     }
 
@@ -33,11 +34,21 @@ run_file :: proc(file_path: string) {
 }
 
 run_prompt :: proc() {
+    reader: bufio.Reader
+    bufio.reader_init(&reader, os.to_reader(os.stdin))
+    defer bufio.reader_destroy(&reader)
+
+    line_buf: [4096]byte
     for {
         fmt.print("#> ")
-        line, ok := fmt.read_line(os.stdin)
-        if !ok {
+        n, err := bufio.reader_read(&reader, line_buf[:])
+        if err != nil || n == 0 {
             return
+        }
+        line := string(line_buf[:n])
+        // strip trailing newline
+        if len(line) > 0 && line[len(line)-1] == '\n' {
+            line = line[:len(line)-1]
         }
         run(line)
         had_error = false
@@ -46,10 +57,10 @@ run_prompt :: proc() {
 
 run :: proc(source: string) {
     scanner := scanner_init(source, context.allocator)
-    scanner.scan_tokens()
+    scan_tokens(&scanner)
 
     for token in scanner.tokens {
-        fmt.println(token_to_string(token))
+        fmt.printfln("%v %s %v", token.token_type, token.lexeme, token.literal)
     }
 }
 
