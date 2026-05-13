@@ -13,3 +13,6 @@ mimir/odin_book_1_10.*
 
 # Compiled binary
 mimir/mimir
+
+# Testing implemenation in C3. Trying to see if it fits the goals of Mimir better.
+mimir_c3/

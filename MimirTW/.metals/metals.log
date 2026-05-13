@@ -7306,3 +7306,124 @@ WARNING: Unmatched cancel notification for request id 14761
 2026.05.04 20:32:19 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7
 2026.05.04 20:32:19 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala
 2026.05.04 20:32:19 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.10 15:54:14 INFO  Started: Metals version 1.6.7 in folders '/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW' for client Visual Studio Code 1.119.0.[0m
+2026.05.10 15:54:14 INFO  Memory monitor started[0m
+2026.05.10 15:54:14 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.05.10 15:54:14 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:16 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:16 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:16 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+May 10, 2026 3:54:17 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 10, 2026 3:54:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2026.05.10 15:54:16 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:18 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:23 INFO  running '/Users/calebwolfe/Library/Application Support/Coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2026.05.10 15:54:23 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Scanner.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:23 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:23 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/metals.sbt[0m
+2026.05.10 15:54:23 WARN  no build target for: /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/metals.sbt[0m
+2026.05.10 15:54:23 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.05.10 15:54:24 INFO  [info] welcome to sbt 1.12.11 (Homebrew Java 25.0.2)[0m
+2026.05.10 15:54:24 INFO  [info] loading settings for project mimirtw-build-build-build from metals.sbt...[0m
+2026.05.10 15:54:24 INFO  [info] loading project definition from /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/project[0m
+2026.05.10 15:54:26 INFO  [info] loading settings for project mimirtw-build-build from metals.sbt...[0m
+2026.05.10 15:54:26 INFO  [info] loading project definition from /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project[0m
+2026.05.10 15:54:28 INFO  [success] Generated .bloop/mimirtw-build-build.json[0m
+2026.05.10 15:54:28 INFO  [success] Total time: 2 s, completed May 10, 2026, 3:54:28 PM[0m
+2026.05.10 15:54:28 INFO  [info] loading settings for project mimirtw-build from metals.sbt, plugins.sbt...[0m
+2026.05.10 15:54:28 INFO  [info] loading project definition from /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project[0m
+2026.05.10 15:54:28 INFO  [success] Generated .bloop/mimirtw-build.json[0m
+2026.05.10 15:54:28 INFO  [success] Total time: 0 s, completed May 10, 2026, 3:54:28 PM[0m
+2026.05.10 15:54:29 INFO  [info] loading settings for project root from build.sbt...[0m
+2026.05.10 15:54:29 INFO  [info] set current project to MimirTW (in build file:/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/)[0m
+2026.05.10 15:54:29 INFO  [warn] there's a key that's not used by any other settings/tasks:[0m
+2026.05.10 15:54:29 INFO  [warn]  [0m
+2026.05.10 15:54:29 INFO  [warn] * root / idePackagePrefix[0m
+2026.05.10 15:54:29 INFO  [warn]   +- /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/build.sbt:6[0m
+2026.05.10 15:54:29 INFO  [warn]  [0m
+2026.05.10 15:54:29 INFO  [warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check[0m
+2026.05.10 15:54:29 INFO  [warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key[0m
+2026.05.10 15:54:29 INFO  [success] Generated .bloop/root-test.json[0m
+2026.05.10 15:54:29 INFO  [success] Generated .bloop/root.json[0m
+2026.05.10 15:54:29 INFO  [success] Total time: 0 s, completed May 10, 2026, 3:54:29 PM[0m
+2026.05.10 15:54:29 INFO  time: ran 'sbt bloopInstall' in 6.15s[0m
+2026.05.10 15:54:29 INFO  Attempting to connect to the build server...[0m
+2026.05.10 15:54:29 INFO  No running Bloop server found, starting one.[0m
+2026.05.10 15:54:33 INFO  Starting compilation server[0m
+2026.05.10 15:54:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.05.10 15:54:34 INFO  Attempting to connect to the build server...[0m
+2026.05.10 15:54:34 INFO  Found a Bloop server running[0m
+2026.05.10 15:54:34 INFO  Attempting to connect to the build server...[0m
+2026.05.10 15:54:34 INFO  Found a Bloop server running[0m
+2026.05.10 15:54:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.05.10 15:54:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.05.10 15:54:36 INFO  time: Connected to build server in 6.62s[0m
+2026.05.10 15:54:36 INFO  Connected to Build server: Bloop v2.0.19[0m
+2026.05.10 15:54:39 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.05.10 15:54:39 INFO  Created report: Optional[file:///Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/jar:file:/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib/src.zip!/jdk.javadoc/jdk/javadoc/internal/doclets/formats/html/HtmlConfiguration.java][0m
+2026.05.10 15:54:39 INFO  Java indexer failed with and exception. (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/metals-full/2026-05-10/r_failed-idex-java_15-54-40-203.md")[0m
+2026.05.10 15:54:44 INFO  time: indexed workspace in 7.96s[0m
+2026.05.10 15:54:44 INFO  compiling root (6 scala sources)[0m
+2026.05.10 15:54:46 INFO  time: compiled root in 1.95s[0m
+2026.05.10 16:21:23 INFO  Shut down connection with build server.[0m
+2026.05.10 16:21:23 INFO  Shut down connection with build server.[0m
+2026.05.10 16:21:23 INFO  Shut down connection with build server.[0m
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@4de8b406[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1185]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:477)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:468)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:57)
+	at scala.concurrent.Promise.complete$(Promise.scala:56)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:104)
+	at bloop.rifle.internal.Operations$.$anonfun$bsp$1(Operations.scala:378)
+	at bloop.rifle.BloopRifleLogger.$anonfun$runnable$1(BloopRifleLogger.scala:14)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@4de8b406[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1185]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:477)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:468)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:57)
+	at scala.concurrent.Promise.complete$(Promise.scala:56)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:104)
+	at bloop.rifle.internal.Operations$.$anonfun$bsp$1(Operations.scala:378)
+	at bloop.rifle.BloopRifleLogger.$anonfun$runnable$1(BloopRifleLogger.scala:14)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@4de8b406[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1185]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:477)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:468)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:57)
+	at scala.concurrent.Promise.complete$(Promise.scala:56)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:104)
+	at bloop.rifle.internal.Operations$.$anonfun$bsp$1(Operations.scala:378)
+	at bloop.rifle.BloopRifleLogger.$anonfun$runnable$1(BloopRifleLogger.scala:14)
+	at java.base/java.lang.Thread.run(Thread.java:1474)

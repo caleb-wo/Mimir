@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/TokenType.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/TokenType.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metals/metals.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metals/metals.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/.metals/metals.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Expr.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Expr.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +63,6 @@
   <component name="ScalaProjectSettings">
     <option name="migrateConfigurationsNotificationShown" value="true" />
   </component>
-  <component name="ShouldUpdateRunConfigurations">
-    <option name="isDowngrading" />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="50c0825b-17b0-48d0-a5ff-b9fd896ad81a" name="Changes" comment="" />
@@ -77,6 +77,7 @@
       <workItem from="1777949032876" duration="228000" />
       <workItem from="1777955015752" duration="540000" />
       <workItem from="1778188207341" duration="1134000" />
+      <workItem from="1778705539603" duration="191000" />
     </task>
     <servers />
   </component>
