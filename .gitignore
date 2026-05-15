@@ -2,7 +2,7 @@
 ~$*.docx
 
 # Apple
-.DS_Store/
+.DS_Store
 
 # Class Status Report
 class/

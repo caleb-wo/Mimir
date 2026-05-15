@@ -41,6 +41,9 @@ build/
 ### VS Code ###
 .vscode/
 
+### Bloop (Metals build server) ###
+.bloop/
+
 ### Mac OS ###
 .DS_Store
 
