@@ -7656,3 +7656,186 @@ WARNING: Unmatched cancel notification for request id 4
 2026.05.15 11:46:56 INFO  time: compiled root in 1ms[0m
 2026.05.15 11:46:56 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
 2026.05.15 11:46:56 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:18:54 WARN  Could not load snapshot text for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Expr.scala[0m
+May 15, 2026 12:19:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 106
+May 15, 2026 12:19:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 462
+2026.05.15 12:19:36 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:19:36 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:19:36 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:19:36 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:35:24 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:35:24 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:35:24 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:35:24 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:35:45 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:35:45 INFO  time: compiled root in 2ms[0m
+2026.05.15 12:35:45 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:35:45 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:36:42 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:36:42 INFO  time: compiled root in 838μs[0m
+2026.05.15 12:36:42 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:36:42 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:37:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1316
+2026.05.15 12:38:11 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:38:11 INFO  time: compiled root in 811μs[0m
+2026.05.15 12:38:11 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:38:11 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:40:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1871
+2026.05.15 12:41:08 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:41:08 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:41:08 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:41:08 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:42:52 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:42:52 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:42:52 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:42:52 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:43:38 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:43:38 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:43:38 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:43:38 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:44:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3421
+2026.05.15 12:44:16 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:44:16 INFO  time: compiled root in 833μs[0m
+2026.05.15 12:44:16 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:44:16 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:44:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3481
+May 15, 2026 12:44:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3506
+2026.05.15 12:44:46 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:44:46 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:44:46 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:44:46 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:45:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3936
+May 15, 2026 12:45:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4098
+2026.05.15 12:45:24 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:45:24 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:45:24 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:45:24 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:50:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4222
+May 15, 2026 12:50:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4290
+May 15, 2026 12:50:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4362
+May 15, 2026 12:51:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4913
+2026.05.15 12:51:40 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:51:40 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:51:40 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:51:40 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:51:54 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:51:54 INFO  time: compiled root in 2ms[0m
+2026.05.15 12:51:54 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:51:54 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:52:06 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:52:06 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:52:06 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:52:06 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:52:29 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:52:29 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:52:29 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:52:29 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:52:39 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:52:39 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:52:39 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:52:39 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:53:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5551
+2026.05.15 12:54:20 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:54:20 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:54:20 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:54:20 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 12:54:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5760
+May 15, 2026 12:54:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5764
+2026.05.15 12:54:40 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:54:40 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:54:40 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:54:40 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:54:56 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:54:56 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:54:56 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:54:56 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:55:28 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:55:28 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:55:28 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:55:28 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:56:24 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:56:24 INFO  time: compiled root in 909μs[0m
+2026.05.15 12:56:24 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:56:24 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:56:34 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:56:34 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:56:34 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:56:34 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 12:58:10 INFO  compiling root (2 scala sources)[0m
+2026.05.15 12:58:10 INFO  time: compiled root in 1ms[0m
+2026.05.15 12:58:10 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 12:58:10 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:00:11 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:00:11 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:00:11 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:00:11 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 1:00:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7959
+May 15, 2026 1:00:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8013
+2026.05.15 13:01:17 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:01:17 INFO  time: compiled root in 671μs[0m
+2026.05.15 13:01:17 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:01:17 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:03:28 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:03:28 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:03:28 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:03:28 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:03:51 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:03:51 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:03:51 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:03:51 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:04:24 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:04:24 INFO  time: compiled root in 515μs[0m
+2026.05.15 13:04:24 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:04:24 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 1:04:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8987
+May 15, 2026 1:04:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9038
+May 15, 2026 1:05:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9391
+2026.05.15 13:06:11 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:06:11 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:06:11 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:06:11 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:07:37 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:07:37 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:07:37 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:07:37 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:08:06 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:08:06 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:08:06 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:08:06 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:08:51 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:08:51 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:08:51 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:08:51 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:09:50 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:09:50 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:09:50 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:09:50 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+2026.05.15 13:10:51 INFO  compiling root (2 scala sources)[0m
+2026.05.15 13:10:51 INFO  time: compiled root in 1ms[0m
+2026.05.15 13:10:51 INFO  java.lang.IllegalArgumentException: requirement failed: Source file '<HOME>/Library/Caches/Coursier/... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_java.lang.IllegalArg..._11-46-53-286.md")[0m
+2026.05.15 13:10:51 INFO  Unexpected error when compiling root: java.lang.IllegalArgumentException: requirement failed: Source... (full report at: "/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/.reports/bloop/2026-05-15/r_Unexpected error whe..._11-46-53-291.md")[0m
+May 15, 2026 1:11:42 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 15, 2026 1:11:44 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
