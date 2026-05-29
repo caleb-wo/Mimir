@@ -2,10 +2,16 @@ package tree.walk.mimir
 
 import TokenType.*
 import Expr.*
-import scala.compiletime.ops.double
 
+class ParseError extends RuntimeException
 class Parser(tokens: List[Token]):
   private var current = 0
+
+  def parse(): Expr =
+    try
+      expression()
+    catch
+      case _: ParseError => null
 
   private def expression(): Expr =
     equality()
@@ -100,4 +106,21 @@ class Parser(tokens: List[Token]):
       consume(RightParen, "Expect ')' after expression.")
       Expr.Grouping(expr)
     else
-      throw new RuntimeException("Expect expression.")
+      throw error(peek(), "Expect expression.")
+  
+  private def consume(tokenType: TokenType, message: String): Token =
+    if check(tokenType) then advance()
+    else throw error(peek(), message)
+
+  private def error(token: Token, message: String): ParseError =
+      tree.walk.mimir.error(token, message)
+      ParseError()
+  
+  private def synchronize(): Unit =
+    advance()
+    while !isAtEnd() do
+      peek().tokenType match
+        case Bind | If | Else | While | Process | Return | Print =>
+          return
+        case _ =>
+          advance()

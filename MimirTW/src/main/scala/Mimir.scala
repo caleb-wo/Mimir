@@ -6,6 +6,7 @@ import java.nio.charset.Charset
 
 var hadError = false
 
+
 @main
 def mimir(args: String*): Unit =
   if args.length > 1 then
@@ -33,11 +34,20 @@ def run(source: String): Unit =
   val scanner = Scanner(source)
   val tokens = scanner.scanTokens()
   
-  for token <- tokens do
-    println(token)
+  val parser = Parser(tokens)
+  val expression = parser.parse()
+
+  if hadError then return
+  println(expression.printer)
 
 def error(line: Int, message: String): Unit =
   report(line, "", message)
+def error(token: Token, message: String): Unit =
+  if token.tokenType == TokenType.EOF then
+    report(token.line, " at end", message)
+  else
+    report(token.line, s" at '${token.lexeme}'", message)
+  hadError = true
   
 def report(line: Int
            ,where: String
