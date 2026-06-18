@@ -8194,3 +8194,211 @@ WARNING: Unmatched cancel notification for request id 714
 2026.05.29 10:30:16 INFO  time: compiled root in 0.18s[0m
 2026.05.29 10:30:29 INFO  compiling root (1 scala source)[0m
 2026.05.29 10:30:29 INFO  time: compiled root in 0.15s[0m
+2026.05.29 10:33:47 INFO  Shut down connection with build server.[0m
+2026.05.29 10:33:47 INFO  Shut down connection with build server.[0m
+2026.05.29 10:33:47 INFO  Shut down connection with build server.[0m
+2026.05.29 10:34:08 INFO  Started: Metals version 1.6.7 in folders '/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW' for client Visual Studio Code 1.122.1.
+2026.05.29 10:34:08 INFO  Memory monitor started
+2026.05.29 10:34:08 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.29 10:34:08 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.29 10:34:09 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.05.29 10:34:09 INFO  Attempting to connect to the build server...
+2026.05.29 10:34:09 INFO  Found a Bloop server running
+2026.05.29 10:34:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.29 10:34:09 INFO  Attempting to connect to the build server...
+2026.05.29 10:34:09 INFO  Found a Bloop server running
+2026.05.29 10:34:09 INFO  Attempting to connect to the build server...
+2026.05.29 10:34:09 INFO  Found a Bloop server running
+2026.05.29 10:34:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.29 10:34:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.05.29 10:34:09 INFO  time: Connected to build server in 0.28s
+2026.05.29 10:34:09 INFO  Connected to Build server: Bloop v2.0.19
+May 29, 2026 10:34:09 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+May 29, 2026 10:34:09 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.05.29 10:34:09 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.8.3
+May 29, 2026 10:34:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2026.05.29 10:34:10 ERROR Running process '/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java -version' failed
+java.io.IOException: Cannot run program "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java" (in directory "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"): Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1112)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+Caused by: java.io.IOException: Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:300)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:231)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1078)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+
+May 29, 2026 10:34:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+May 29, 2026 10:34:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14
+May 29, 2026 10:34:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+May 29, 2026 10:34:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 18
+2026.05.29 10:34:11 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.05.29 10:34:11 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar
+2026.05.29 10:34:11 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar
+2026.05.29 10:34:11 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar
+2026.05.29 10:34:11 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar
+2026.05.29 10:34:11 INFO  time: indexed workspace in 1.84s
+2026.05.29 10:36:30 INFO  Shut down connection with build server.
+2026.05.29 10:36:30 INFO  Shut down connection with build server.
+2026.05.29 10:36:30 INFO  Shut down connection with build server.
+2026.06.17 18:11:53 INFO  Started: Metals version 1.6.7 in folders '/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW' for client Visual Studio Code 1.125.0.[0m
+2026.06.17 18:11:53 INFO  Memory monitor started[0m
+2026.06.17 18:11:53 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.06.17 18:11:53 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:54 INFO  Attempting to connect to the build server...[0m
+2026.06.17 18:11:54 INFO  No running Bloop server found, starting one.[0m
+Jun 17, 2026 6:11:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 17, 2026 6:11:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+Jun 17, 2026 6:11:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:55 INFO  Starting compilation server[0m
+2026.06.17 18:11:54 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Parser.scala. Using presentation compiler with project's scala-library version: 3.3.7[0m
+2026.06.17 18:11:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.06.17 18:11:56 ERROR /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home release file missing JAVA_VERSION property - using Bloop's JVM version 26.0.1[0m
+2026.06.17 18:11:56 ERROR /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home release file missing JAVA_VERSION property - using Bloop's JVM version 26.0.1[0m
+2026.06.17 18:11:56 INFO  Attempting to connect to the build server...[0m
+2026.06.17 18:11:56 INFO  Found a Bloop server running[0m
+2026.06.17 18:11:56 INFO  Attempting to connect to the build server...[0m
+2026.06.17 18:11:56 INFO  Found a Bloop server running[0m
+2026.06.17 18:11:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.06.17 18:11:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2026.06.17 18:11:56 INFO  time: Connected to build server in 1.62s[0m
+2026.06.17 18:11:56 INFO  Connected to Build server: Bloop v2.0.19[0m
+2026.06.17 18:11:57 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.06.17 18:11:57 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar[0m
+2026.06.17 18:11:57 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar[0m
+2026.06.17 18:11:57 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar[0m
+2026.06.17 18:11:57 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar[0m
+2026.06.17 18:11:57 INFO  time: indexed workspace in 1.59s[0m
+2026.06.17 18:11:58 ERROR Running process '/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java -version' failed
+java.io.IOException: Cannot run program "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java" (in directory "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"): Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1112)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+Caused by: java.io.IOException: Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:300)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:231)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1078)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+[0m
+2026.06.17 18:41:18 WARN  Could not find semantic tokens for: file:///Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Interpreter.scala[0m
+2026.06.17 18:41:18 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:41:18 INFO  time: compiled root in 0.61s[0m
+2026.06.17 18:41:23 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:41:23 INFO  time: compiled root in 0.18s[0m
+2026.06.17 18:41:54 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:41:54 INFO  time: compiled root in 88ms[0m
+2026.06.17 18:49:35 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:49:35 INFO  time: compiled root in 0.54s[0m
+2026.06.17 18:52:59 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:52:59 INFO  time: compiled root in 0.22s[0m
+2026.06.17 18:54:05 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:54:05 INFO  time: compiled root in 0.16s[0m
+Jun 17, 2026 6:56:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1057
+Jun 17, 2026 6:56:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1070
+Jun 17, 2026 6:56:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1192
+2026.06.17 18:57:10 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:57:10 INFO  time: compiled root in 0.16s[0m
+2026.06.17 18:58:00 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:58:00 INFO  time: compiled root in 0.17s[0m
+2026.06.17 18:58:18 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:58:18 INFO  time: compiled root in 0.15s[0m
+2026.06.17 18:58:21 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:58:21 INFO  time: compiled root in 0.13s[0m
+2026.06.17 18:58:48 INFO  compiling root (1 scala source)[0m
+2026.06.17 18:58:48 INFO  time: compiled root in 0.13s[0m
+Jun 17, 2026 6:58:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 17, 2026 6:58:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 17, 2026 6:58:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
