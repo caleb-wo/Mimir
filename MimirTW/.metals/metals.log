@@ -8402,3 +8402,160 @@ Jun 17, 2026 6:58:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 Jun 17, 2026 6:58:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2026.06.17 18:59:21 INFO  Shut down connection with build server.[0m
+2026.06.17 18:59:21 INFO  Shut down connection with build server.[0m
+2026.06.17 18:59:21 INFO  Shut down connection with build server.[0m
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@1a407d53[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 25970]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:477)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:468)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:57)
+	at scala.concurrent.Promise.complete$(Promise.scala:56)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:104)
+	at bloop.rifle.internal.Operations$.$anonfun$bsp$1(Operations.scala:378)
+	at bloop.rifle.BloopRifleLogger.$anonfun$runnable$1(BloopRifleLogger.scala:14)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@1a407d53[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 25970]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:477)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:468)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:371)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:295)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:57)
+	at scala.concurrent.Promise.complete$(Promise.scala:56)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:104)
+	at bloop.rifle.internal.Operations$.$anonfun$bsp$1(Operations.scala:378)
+	at bloop.rifle.BloopRifleLogger.$anonfun$runnable$1(BloopRifleLogger.scala:14)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@1a407d53[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 25970]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2032)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:787)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1328)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:462)
+2026.06.19 18:22:49 INFO  Started: Metals version 1.6.7 in folders '/Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW' for client Visual Studio Code 1.125.1.
+2026.06.19 18:22:49 INFO  Memory monitor started
+2026.06.19 18:22:49 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.19 18:22:50 INFO  no build target found for /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/src/main/scala/Interpreter.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.06.19 18:22:50 INFO  Attempting to connect to the build server...
+2026.06.19 18:22:50 INFO  Found a Bloop server running
+2026.06.19 18:22:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.06.19 18:22:50 INFO  Attempting to connect to the build server...
+2026.06.19 18:22:50 INFO  Found a Bloop server running
+2026.06.19 18:22:50 INFO  Attempting to connect to the build server...
+2026.06.19 18:22:50 INFO  Found a Bloop server running
+2026.06.19 18:22:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.06.19 18:22:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/calebwolfe/Desktop/BYUI/CSE499R/Mimir/MimirTW/project/.metals/bsp.trace.json or /Users/calebwolfe/Library/Caches/org.scalameta.metals/bsp.trace.json
+2026.06.19 18:22:50 INFO  time: Connected to build server in 0.33s
+2026.06.19 18:22:50 INFO  Connected to Build server: Bloop v2.0.19
+Jun 19, 2026 6:22:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 19, 2026 6:22:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2026.06.19 18:22:52 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.06.19 18:22:52 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar
+2026.06.19 18:22:52 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar
+2026.06.19 18:22:52 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.8.3/scala3-library_3-3.8.3-sources.jar
+2026.06.19 18:22:52 WARN  unexpected dependency with absolute path: /Users/calebwolfe/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/3.8.3/scala-library-3.8.3-sources.jar
+2026.06.19 18:22:52 INFO  time: indexed workspace in 2.03s
+2026.06.19 18:22:52 ERROR Running process '/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java -version' failed
+java.io.IOException: Cannot run program "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java" (in directory "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"): Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1112)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+Caused by: java.io.IOException: Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:300)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:231)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1078)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1046)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.JdkVersion$.fromShell(JavaInteractiveSemanticdb.scala:238)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$3(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.JdkVersion$.$anonfun$maybeJdkVersionFromJavaHome$2(JavaInteractiveSemanticdb.scala:229)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.JdkVersion$.maybeJdkVersionFromJavaHome(JavaInteractiveSemanticdb.scala:227)
+	at scala.meta.internal.metals.CompilerConfiguration.$anonfun$enrichWithReleaseOption$3(CompilerConfiguration.scala:402)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.CompilerConfiguration.optBuildTargetJvmVersion$1(CompilerConfiguration.scala:391)
+	at scala.meta.internal.metals.CompilerConfiguration.scala$meta$internal$metals$CompilerConfiguration$$enrichWithReleaseOption(CompilerConfiguration.scala:407)
+	at scala.meta.internal.metals.CompilerConfiguration$ScalaLazyCompiler.newCompiler(CompilerConfiguration.scala:195)
+	at scala.meta.internal.metals.CompilerConfiguration$LazyCompiler.$anonfun$presentationCompilerFuture$2(CompilerConfiguration.scala:135)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.lang.Thread.run(Thread.java:1516)
+
+Jun 19, 2026 6:32:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 107
+2026.06.19 18:32:52 INFO  compiling root (1 scala source)
+2026.06.19 18:32:52 INFO  time: compiled root in 0.2s
+2026.06.19 18:33:05 INFO  compiling root (1 scala source)
+2026.06.19 18:33:05 INFO  time: compiled root in 0.14s
+2026.06.19 18:33:14 INFO  compiling root (1 scala source)
+2026.06.19 18:33:14 INFO  time: compiled root in 0.11s
+2026.06.19 18:33:21 INFO  compiling root (1 scala source)
+2026.06.19 18:33:21 INFO  time: compiled root in 77ms
+2026.06.19 18:33:33 INFO  compiling root (1 scala source)
+2026.06.19 18:33:33 INFO  time: compiled root in 0.25s
+2026.06.19 18:33:49 INFO  compiling root (1 scala source)
+2026.06.19 18:33:49 INFO  time: compiled root in 0.17s
+2026.06.19 18:59:31 INFO  compiling root (1 scala source)
+2026.06.19 18:59:31 INFO  time: compiled root in 0.24s
+2026.06.19 19:05:19 INFO  compiling root (1 scala source)
+2026.06.19 19:05:19 INFO  time: compiled root in 0.19s
+2026.06.19 19:30:43 INFO  compiling root (1 scala source)
+2026.06.19 19:30:43 INFO  time: compiled root in 0.2s
+2026.06.19 19:31:03 INFO  compiling root (1 scala source)
+2026.06.19 19:31:03 INFO  time: compiled root in 0.18s
+Jun 19, 2026 7:36:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 767
+2026.06.19 19:36:26 INFO  compiling root (1 scala source)
+2026.06.19 19:36:26 INFO  time: compiled root in 0.16s
+2026.06.19 19:36:44 INFO  compiling root (1 scala source)
+2026.06.19 19:36:44 INFO  time: compiled root in 0.16s
+Jun 19, 2026 7:36:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1046
+2026.06.19 19:37:15 INFO  compiling root (1 scala source)
+2026.06.19 19:37:15 INFO  time: compiled root in 89ms
+2026.06.19 19:37:26 INFO  compiling root (1 scala source)
+2026.06.19 19:37:26 INFO  time: compiled root in 85ms
+2026.06.19 19:37:49 INFO  compiling root (1 scala source)
+2026.06.19 19:37:49 INFO  time: compiled root in 0.15s
+2026.06.19 19:50:41 INFO  compiling root (1 scala source)
+2026.06.19 19:50:41 INFO  time: compiled root in 0.15s
